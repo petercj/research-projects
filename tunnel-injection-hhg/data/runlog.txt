@@ -1,0 +1,147 @@
+[K_80_240] norb=209 225s norm_err=2.0e-10  peak internal field=1.283 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00684/0.00708/0.00443  Nh=0.00539/0.00539/0.00360  hot=0.00019 | metal holes=0.02256  Eabs=0.0570 eV  EH=0.0015 eV
+   H1=7.53e-02 H2=1.14e-05 H3=9.48e-06 H4=1.54e-05 H5=2.09e-05 H6=1.08e-05 H7=5.98e-06 H8=1.43e-05 H9=9.52e-07 H10=3.56e-06 H11=2.08e-06 H12=1.91e-06 H13=6.64e-07
+[K_80_400] norb=241 308s norm_err=5.3e-10  peak internal field=1.248 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00294/0.00331/0.00298  Nh=0.00255/0.00276/0.00253  hot=0.00002 | metal holes=0.01903  Eabs=0.0484 eV  EH=0.0005 eV
+   H1=7.53e-02 H2=1.01e-05 H3=7.89e-06 H4=1.43e-05 H5=1.88e-05 H6=8.81e-06 H7=4.50e-06 H8=1.20e-05 H9=1.73e-06 H10=1.88e-06 H11=1.54e-06 H12=1.09e-06 H13=5.78e-07
+[K_120_240] norb=289 454s norm_err=9.6e-10  peak internal field=1.283 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00684/0.00709/0.00443  Nh=0.00540/0.00539/0.00361  hot=0.00019 | metal holes=0.02244  Eabs=0.0570 eV  EH=0.0015 eV
+   H1=7.72e-02 H2=1.15e-05 H3=9.48e-06 H4=1.53e-05 H5=2.09e-05 H6=1.08e-05 H7=5.99e-06 H8=1.43e-05 H9=9.54e-07 H10=3.56e-06 H11=2.07e-06 H12=1.90e-06 H13=6.91e-07
+[K_80_640] norb=290 476s norm_err=5.9e-10  peak internal field=1.262 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00308/0.00338/0.00310  Nh=0.00265/0.00283/0.00262  hot=0.00002 | metal holes=0.02074  Eabs=0.0522 eV  EH=0.0004 eV
+   H1=7.53e-02 H2=1.05e-05 H3=8.54e-06 H4=1.40e-05 H5=1.82e-05 H6=8.63e-06 H7=5.54e-06 H8=1.09e-05 H9=1.50e-06 H10=2.30e-06 H11=1.53e-06 H12=1.25e-06 H13=5.91e-07
+[A_j_D4.6] norb=209 227s norm_err=2.0e-10  peak internal field=1.014 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00435/0.00348/0.00221  Nh=0.00306/0.00249/0.00163  hot=0.00009 | metal holes=0.01572  Eabs=0.0307 eV  EH=0.0008 eV
+   H1=4.93e-02 H2=1.21e-05 H3=5.29e-06 H4=1.30e-05 H5=4.93e-06 H6=2.08e-06 H7=7.84e-07 H8=2.40e-07 H9=5.75e-07 H10=1.59e-07 H11=1.02e-07 H12=2.17e-08 H13=1.42e-08
+[A_j_D3.4] norb=209 228s norm_err=2.0e-10  peak internal field=0.677 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00190/0.00181/0.00169  Nh=0.00135/0.00126/0.00117  hot=0.00002 | metal holes=0.00750  Eabs=0.0104 eV  EH=0.0005 eV
+   H1=2.72e-02 H2=9.12e-06 H3=4.64e-06 H4=1.04e-06 H5=2.32e-08 H6=1.27e-08 H7=1.54e-08 H8=4.07e-08 H9=2.48e-09 H10=1.87e-09 H11=7.10e-11 H12=2.56e-10 H13=9.50e-09
+[A_j_D2.3] norb=209 227s norm_err=2.0e-10  peak internal field=0.396 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00143/0.00127/0.00091  Nh=0.00096/0.00084/0.00061  hot=0.00001 | metal holes=0.00348  Eabs=0.0040 eV  EH=0.0002 eV
+   H1=1.25e-02 H2=4.61e-06 H3=5.82e-07 H4=3.98e-08 H5=3.83e-09 H6=5.03e-10 H7=5.27e-10 H8=8.96e-11 H9=3.43e-11 H10=5.75e-11 H11=1.80e-10 H12=1.07e-09 H13=1.07e-08
+[A_j_D5.7] norb=209 229s norm_err=2.0e-10  peak internal field=1.283 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00684/0.00708/0.00443  Nh=0.00539/0.00539/0.00360  hot=0.00019 | metal holes=0.02256  Eabs=0.0570 eV  EH=0.0015 eV
+   H1=7.53e-02 H2=1.14e-05 H3=9.48e-06 H4=1.54e-05 H5=2.09e-05 H6=1.08e-05 H7=5.98e-06 H8=1.43e-05 H9=9.52e-07 H10=3.56e-06 H11=2.08e-06 H12=1.91e-06 H13=6.64e-07
+[A_s_D2.3] norb=208 243s norm_err=5.2e-10  peak internal field=0.421 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=-0.00000/-0.00000/-0.00000  Nh=-0.00003/-0.00003/-0.00003  hot=-0.00000 | metal holes=0.00000  Eabs=0.0001 eV  EH=0.0000 eV
+   H1=1.18e-02 H2=9.40e-07 H3=2.24e-08 H4=2.91e-10 H5=3.93e-10 H6=1.25e-10 H7=2.53e-09 H8=1.28e-10 H9=1.39e-10 H10=5.73e-10 H11=2.35e-09 H12=5.76e-09 H13=1.55e-08
+[A_s_D3.4] norb=208 244s norm_err=5.2e-10  peak internal field=0.618 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=-0.00000/-0.00000/-0.00000  Nh=-0.00003/-0.00003/-0.00003  hot=-0.00000 | metal holes=0.00000  Eabs=0.0001 eV  EH=0.0000 eV
+   H1=2.59e-02 H2=2.09e-06 H3=2.60e-07 H4=3.84e-09 H5=2.45e-08 H6=5.27e-09 H7=1.86e-07 H8=1.39e-08 H9=4.04e-08 H10=1.36e-09 H11=3.29e-09 H12=7.70e-09 H13=5.53e-09
+[A_s_D4.6] norb=208 244s norm_err=5.2e-10  peak internal field=0.826 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00001/0.00001/0.00002  Nh=-0.00001/-0.00001/-0.00001  hot=0.00000 | metal holes=0.00000  Eabs=0.0002 eV  EH=0.0000 eV
+   H1=4.74e-02 H2=3.95e-06 H3=1.81e-06 H4=3.16e-08 H5=1.91e-07 H6=4.34e-08 H7=2.15e-06 H8=4.38e-07 H9=2.89e-06 H10=7.73e-08 H11=1.96e-07 H12=9.95e-09 H13=1.04e-08
+[A_s_D5.7] norb=208 248s norm_err=5.2e-10  peak internal field=1.009 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00012/0.00012/0.00013  Nh=0.00011/0.00011/0.00010  hot=0.00001 | metal holes=0.00000  Eabs=0.0010 eV  EH=0.0000 eV
+   H1=7.29e-02 H2=6.32e-06 H3=6.88e-06 H4=1.33e-07 H5=5.90e-07 H6=1.60e-07 H7=5.12e-06 H8=3.31e-06 H9=3.47e-05 H10=1.53e-06 H11=6.93e-06 H12=1.08e-07 H13=3.13e-07
+[A_j_D6.8] norb=209 244s norm_err=2.0e-10  peak internal field=1.481 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.01133/0.01049/0.00814  Nh=0.00953/0.00886/0.00726  hot=0.00030 | metal holes=0.03371  Eabs=0.1028 eV  EH=0.0020 eV
+   H1=1.07e-01 H2=1.25e-05 H3=4.12e-05 H4=2.14e-05 H5=2.80e-05 H6=7.18e-05 H7=5.30e-05 H8=1.08e-04 H9=2.01e-05 H10=4.06e-05 H11=7.71e-06 H12=2.07e-05 H13=1.00e-05
+[A_j_D8.5] norb=209 243s norm_err=2.0e-10  peak internal field=1.766 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.02746/0.02615/0.02233  Nh=0.02615/0.02508/0.02242  hot=0.00147 | metal holes=0.05472  Eabs=0.2566 eV  EH=0.0044 eV
+   H1=1.65e-01 H2=3.97e-05 H3=1.42e-04 H4=3.86e-05 H5=1.91e-05 H6=1.10e-04 H7=9.38e-05 H8=2.09e-04 H9=3.39e-04 H10=3.84e-04 H11=2.07e-04 H12=2.11e-04 H13=3.25e-05
+[A_s_D6.8] norb=208 251s norm_err=5.2e-10  peak internal field=1.182 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00053/0.00053/0.00050  Nh=0.00059/0.00056/0.00053  hot=0.00005 | metal holes=0.00000  Eabs=0.0045 eV  EH=0.0000 eV
+   H1=1.04e-01 H2=9.40e-06 H3=1.97e-05 H4=3.07e-07 H5=2.70e-06 H6=5.21e-07 H7=7.04e-06 H8=9.72e-06 H9=1.59e-04 H10=1.47e-05 H11=8.56e-05 H12=2.35e-06 H13=7.62e-06
+[A_s_D8.5] norb=208 254s norm_err=5.2e-10  peak internal field=1.431 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00275/0.00265/0.00241  Nh=0.00361/0.00341/0.00321  hot=0.00017 | metal holes=0.00000  Eabs=0.0277 eV  EH=0.0005 eV
+   H1=1.63e-01 H2=1.56e-05 H3=7.25e-05 H4=8.88e-07 H5=8.32e-06 H6=1.03e-06 H7=3.34e-05 H8=2.13e-05 H9=4.49e-04 H10=1.06e-04 H11=1.06e-03 H12=9.01e-05 H13=3.77e-04
+[A_j_D11.4] norb=209 237s norm_err=2.0e-10  peak internal field=2.125 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.10623/0.10182/0.08852  Nh=0.11518/0.11125/0.10160  hot=0.00600 | metal holes=0.14682  Eabs=1.1494 eV  EH=0.0291 eV
+   H1=2.91e-01 H2=7.92e-04 H3=1.10e-03 H4=9.03e-04 H5=7.36e-04 H6=8.17e-04 H7=9.95e-04 H8=4.39e-04 H9=1.17e-03 H10=9.78e-04 H11=1.08e-03 H12=4.60e-03 H13=3.05e-03
+[C_j_phi0.3] norb=209 238s norm_err=2.0e-10  peak internal field=1.291 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00751/0.00882/0.00487  Nh=0.00611/0.00689/0.00405  hot=0.00046 | metal holes=0.04692  Eabs=0.1009 eV  EH=0.0020 eV
+   H1=7.64e-02 H2=2.06e-05 H3=1.11e-05 H4=3.05e-05 H5=5.86e-05 H6=5.47e-05 H7=1.10e-05 H8=1.07e-05 H9=1.11e-06 H10=1.36e-06 H11=7.41e-07 H12=3.01e-07 H13=1.02e-06
+[A_s_D11.4] norb=208 248s norm_err=5.2e-10  peak internal field=1.852 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.02235/0.02108/0.01874  Nh=0.02688/0.02597/0.02330  hot=0.00053 | metal holes=0.00009  Eabs=0.2264 eV  EH=0.0081 eV
+   H1=2.90e-01 H2=6.43e-05 H3=4.10e-04 H4=3.11e-05 H5=9.23e-05 H6=1.80e-05 H7=1.80e-04 H8=1.98e-04 H9=1.13e-03 H10=1.68e-03 H11=1.05e-02 H12=9.14e-03 H13=1.57e-02
+[C_j_phi0.5] norb=209 238s norm_err=2.0e-10  peak internal field=1.320 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00796/0.00913/0.00445  Nh=0.00629/0.00684/0.00368  hot=0.00026 | metal holes=0.03181  Eabs=0.0779 eV  EH=0.0019 eV
+   H1=7.56e-02 H2=1.46e-05 H3=1.13e-05 H4=2.02e-05 H5=2.62e-05 H6=1.44e-05 H7=7.66e-06 H8=1.27e-05 H9=1.01e-06 H10=2.98e-06 H11=1.77e-06 H12=1.18e-06 H13=4.20e-07
+[C_j_phi1.0] norb=209 234s norm_err=2.0e-10  peak internal field=1.153 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00386/0.00423/0.00307  Nh=0.00312/0.00329/0.00252  hot=0.00006 | metal holes=0.01197  Eabs=0.0306 eV  EH=0.0007 eV
+   H1=7.53e-02 H2=8.48e-06 H3=5.96e-06 H4=1.47e-05 H5=1.86e-05 H6=8.94e-06 H7=2.04e-06 H8=1.08e-05 H9=2.58e-06 H10=6.33e-07 H11=7.22e-07 H12=1.90e-07 H13=2.54e-07
+[C_j_phi1.4] norb=208 233s norm_err=2.0e-10  peak internal field=0.989 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00278/0.00266/0.00232  Nh=0.00247/0.00236/0.00213  hot=0.00002 | metal holes=0.00472  Eabs=0.0158 eV  EH=0.0001 eV
+   H1=7.50e-02 H2=6.38e-06 H3=1.02e-05 H4=1.13e-06 H5=1.02e-05 H6=2.90e-06 H7=6.06e-06 H8=6.64e-06 H9=1.72e-05 H10=4.18e-06 H11=2.58e-06 H12=4.34e-07 H13=1.50e-07
+[C_j_phi1.67] norb=208 233s norm_err=2.0e-10  peak internal field=0.928 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00225/0.00219/0.00210  Nh=0.00219/0.00216/0.00210  hot=0.00001 | metal holes=0.00308  Eabs=0.0135 eV  EH=0.0000 eV
+   H1=7.50e-02 H2=6.41e-06 H3=1.03e-05 H4=1.39e-06 H5=6.64e-06 H6=1.29e-06 H7=6.34e-06 H8=3.68e-06 H9=2.39e-05 H10=1.92e-06 H11=3.49e-06 H12=2.13e-07 H13=1.18e-07
+[C_j_phi2.0] norb=208 236s norm_err=2.0e-10  peak internal field=1.031 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00232/0.00236/0.00223  Nh=0.00255/0.00270/0.00253  hot=-0.00000 | metal holes=0.00238  Eabs=0.0168 eV  EH=0.0001 eV
+   H1=7.50e-02 H2=7.84e-06 H3=1.43e-05 H4=5.33e-06 H5=1.11e-06 H6=1.02e-06 H7=5.75e-06 H8=4.01e-06 H9=1.95e-05 H10=3.60e-06 H11=2.54e-06 H12=4.26e-07 H13=9.69e-08
+[C_j_phi2.3] norb=208 230s norm_err=2.0e-10  peak internal field=1.135 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00318/0.00283/0.00246  Nh=0.00411/0.00360/0.00308  hot=-0.00002 | metal holes=0.00258  Eabs=0.0221 eV  EH=0.0006 eV
+   H1=7.49e-02 H2=8.95e-06 H3=1.26e-05 H4=6.29e-06 H5=1.64e-06 H6=3.61e-06 H7=5.60e-06 H8=5.41e-06 H9=1.21e-05 H10=6.12e-06 H11=1.05e-06 H12=5.31e-07 H13=3.95e-08
+[C_j_phi2.6] norb=208 229s norm_err=2.0e-10  peak internal field=1.227 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00339/0.00341/0.00309  Nh=0.00435/0.00446/0.00404  hot=-0.00002 | metal holes=0.00348  Eabs=0.0268 eV  EH=0.0011 eV
+   H1=7.51e-02 H2=1.10e-05 H3=8.13e-06 H4=8.94e-06 H5=1.81e-06 H6=4.39e-06 H7=6.09e-06 H8=8.59e-06 H9=1.07e-05 H10=5.62e-06 H11=1.45e-06 H12=3.07e-07 H13=5.88e-08
+[D_s_d0.125] norb=208 239s norm_err=5.2e-10  peak internal field=1.205 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00479/0.00428/0.00326  Nh=0.00370/0.00335/0.00264  hot=0.00009 | metal holes=0.01249  Eabs=0.0323 eV  EH=0.0008 eV
+   H1=7.44e-02 H2=8.05e-06 H3=3.78e-06 H4=1.84e-05 H5=3.61e-05 H6=1.30e-05 H7=8.20e-06 H8=1.73e-05 H9=1.02e-05 H10=1.07e-06 H11=3.08e-06 H12=7.33e-07 H13=4.37e-07
+[D_s_d0.25] norb=208 240s norm_err=5.2e-10  peak internal field=1.121 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00301/0.00286/0.00245  Nh=0.00229/0.00218/0.00187  hot=0.00006 | metal holes=0.00621  Eabs=0.0158 eV  EH=0.0011 eV
+   H1=7.30e-02 H2=7.62e-06 H3=4.65e-06 H4=1.20e-05 H5=1.26e-05 H6=3.50e-06 H7=1.14e-05 H8=1.64e-05 H9=7.17e-06 H10=1.21e-05 H11=1.13e-06 H12=1.62e-06 H13=1.49e-07
+[D_s_d0.375] norb=208 239s norm_err=5.2e-10  peak internal field=1.035 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00094/0.00091/0.00087  Nh=0.00069/0.00067/0.00064  hot=0.00004 | metal holes=0.00124  Eabs=0.0038 eV  EH=0.0002 eV
+   H1=7.29e-02 H2=6.67e-06 H3=5.18e-06 H4=5.06e-07 H5=6.91e-07 H6=5.75e-07 H7=6.23e-06 H8=5.80e-06 H9=3.06e-05 H10=2.61e-06 H11=6.30e-06 H12=2.72e-07 H13=3.69e-07
+[D_s_d0.5] norb=208 236s norm_err=5.2e-10  peak internal field=1.010 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00023/0.00022/0.00022  Nh=0.00019/0.00018/0.00018  hot=0.00001 | metal holes=0.00018  Eabs=0.0014 eV  EH=0.0000 eV
+   H1=7.29e-02 H2=6.37e-06 H3=6.62e-06 H4=1.27e-07 H5=5.44e-07 H6=1.88e-07 H7=5.29e-06 H8=3.49e-06 H9=3.44e-05 H10=1.51e-06 H11=6.90e-06 H12=1.08e-07 H13=3.57e-07
+[D_s_d0.75] norb=208 234s norm_err=5.2e-10  peak internal field=1.007 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00012/0.00012/0.00012  Nh=0.00011/0.00011/0.00010  hot=0.00001 | metal holes=0.00000  Eabs=0.0010 eV  EH=0.0000 eV
+   H1=7.29e-02 H2=6.32e-06 H3=6.88e-06 H4=1.33e-07 H5=5.90e-07 H6=1.61e-07 H7=5.13e-06 H8=3.31e-06 H9=3.47e-05 H10=1.52e-06 H11=6.93e-06 H12=1.09e-07 H13=3.23e-07
+[D_s_d1.0] norb=208 232s norm_err=5.2e-10  peak internal field=1.008 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00012/0.00012/0.00011  Nh=0.00011/0.00010/0.00011  hot=0.00001 | metal holes=0.00000  Eabs=0.0010 eV  EH=0.0000 eV
+   H1=7.29e-02 H2=6.32e-06 H3=6.88e-06 H4=1.33e-07 H5=5.89e-07 H6=1.60e-07 H7=5.12e-06 H8=3.31e-06 H9=3.47e-05 H10=1.52e-06 H11=6.94e-06 H12=1.06e-07 H13=3.21e-07
+[B_j_D0.5] norb=209 225s norm_err=1.8e-10  peak internal field=0.427 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.01679/0.01218/0.01146  Nh=-0.00129/-0.00019/-0.00002  hot=0.00000 | metal holes=0.04066  Eabs=0.0365 eV  EH=0.0000 eV
+   H1=5.57e-02 H2=3.81e-03 H3=1.16e-04 H4=1.16e-05 H5=5.45e-07 H6=1.69e-06 H7=6.57e-08 H8=1.23e-08 H9=2.32e-08 H10=3.17e-08 H11=4.14e-08 H12=5.52e-08 H13=7.07e-08
+[B_j_D1.0] norb=209 224s norm_err=1.8e-10  peak internal field=0.854 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.13693/0.11981/0.11556  Nh=-0.00260/-0.00050/0.00003  hot=0.00017 | metal holes=0.22842  Eabs=0.2753 eV  EH=0.0000 eV
+   H1=1.31e-01 H2=2.32e-02 H3=2.47e-03 H4=1.24e-03 H5=2.31e-04 H6=4.54e-04 H7=1.46e-04 H8=5.93e-05 H9=1.97e-05 H10=1.38e-06 H11=2.74e-07 H12=1.73e-08 H13=1.03e-08
+[B_j_D1.5] norb=209 226s norm_err=1.8e-10  peak internal field=1.282 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.33117/0.30554/0.27366  Nh=0.00070/-0.00004/0.00135  hot=0.00244 | metal holes=0.49159  Eabs=0.7798 eV  EH=0.0000 eV
+   H1=2.27e-01 H2=5.02e-02 H3=4.79e-03 H4=1.25e-02 H5=7.18e-03 H6=2.60e-03 H7=1.10e-03 H8=2.08e-03 H9=1.43e-03 H10=4.89e-04 H11=1.73e-04 H12=2.40e-05 H13=4.31e-06
+[B_j_D2.0] norb=209 227s norm_err=1.8e-10  peak internal field=1.709 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.55153/0.53553/0.48742  Nh=0.01084/0.01329/0.01245  hot=0.01711 | metal holes=0.79318  Eabs=1.6669 eV  EH=0.0000 eV
+   H1=3.75e-01 H2=8.34e-02 H3=1.57e-02 H4=3.04e-02 H5=4.47e-02 H6=1.53e-02 H7=1.26e-02 H8=6.94e-03 H9=6.83e-03 H10=6.12e-03 H11=2.59e-03 H12=1.42e-03 H13=3.95e-04
+[I_j_D5.7] norb=209 368s norm_err=3.6e-10  peak internal field=1.315 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.01554/0.01471/0.01262  Nh=0.01285/0.01191/0.01005  hot=0.00017 | metal holes=0.03638  Eabs=0.1050 eV  EH=0.0072 eV
+   H1=1.16e-01 H2=8.83e-06 H3=2.37e-05 H4=2.89e-05 H5=2.90e-05 H6=4.85e-05 H7=6.16e-05 H8=4.53e-05 H9=1.43e-05 H10=9.64e-06 H11=5.08e-06 H12=6.25e-06 H13=2.31e-06
+[I_j_D8.5] norb=209 372s norm_err=3.6e-10  peak internal field=1.817 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.05247/0.05015/0.04534  Nh=0.05102/0.04917/0.04521  hot=0.00125 | metal holes=0.09221  Eabs=0.4975 eV  EH=0.0144 eV
+   H1=2.52e-01 H2=1.10e-04 H3=4.15e-04 H4=1.88e-04 H5=9.28e-05 H6=4.62e-04 H7=5.98e-04 H8=1.20e-03 H9=1.19e-03 H10=5.53e-04 H11=6.49e-04 H12=1.24e-03 H13=8.51e-04
+[I_s_D5.7] norb=208 388s norm_err=8.3e-10  peak internal field=1.009 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00019/0.00019/0.00018  Nh=0.00017/0.00017/0.00018  hot=0.00001 | metal holes=0.00000  Eabs=0.0015 eV  EH=0.0000 eV
+   H1=1.13e-01 H2=5.81e-07 H3=1.08e-05 H4=2.17e-08 H5=8.23e-07 H6=1.04e-07 H7=8.54e-06 H8=5.67e-07 H9=7.17e-05 H10=9.18e-07 H11=1.65e-05 H12=4.49e-07 H13=4.21e-06
+[I_s_D8.5] norb=208 391s norm_err=8.3e-10  peak internal field=1.461 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00439/0.00441/0.00423  Nh=0.00577/0.00562/0.00539  hot=0.00028 | metal holes=0.00000  Eabs=0.0476 eV  EH=0.0004 eV
+   H1=2.50e-01 H2=6.41e-06 H3=1.32e-04 H4=2.80e-06 H5=1.58e-05 H6=9.82e-06 H7=4.16e-05 H8=2.54e-05 H9=9.35e-04 H10=1.96e-04 H11=2.22e-03 H12=1.39e-04 H13=1.04e-03
+[F_j_l4.0] norb=209 228s norm_err=2.0e-10  peak internal field=1.091 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00468/0.00383/0.00242  Nh=0.00333/0.00276/0.00180  hot=0.00010 | metal holes=0.01792  Eabs=0.0363 eV  EH=0.0010 eV
+   H1=2.00e-02 H2=1.30e-05 H3=6.35e-06 H4=2.04e-05 H5=9.65e-06 H6=1.74e-06 H7=3.12e-07 H8=4.66e-07 H9=3.22e-07 H10=1.18e-07 H11=3.89e-08 H12=1.20e-08 H13=1.44e-08
+[F_j_l16.0] norb=209 229s norm_err=2.0e-10  peak internal field=1.363 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00858/0.00894/0.00629  Nh=0.00723/0.00733/0.00556  hot=0.00032 | metal holes=0.02954  Eabs=0.0843 eV  EH=0.0015 eV
+   H1=2.37e-01 H2=2.33e-05 H3=3.92e-05 H4=1.68e-05 H5=5.84e-05 H6=3.72e-05 H7=5.09e-05 H8=2.41e-04 H9=1.00e-04 H10=1.02e-04 H11=9.08e-06 H12=1.90e-05 H13=4.70e-06
+[F_s_l4.0] norb=208 236s norm_err=5.2e-10  peak internal field=0.875 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00001/0.00001/0.00001  Nh=-0.00002/-0.00002/-0.00001  hot=-0.00000 | metal holes=0.00000  Eabs=0.0001 eV  EH=0.0000 eV
+   H1=1.84e-02 H2=1.75e-06 H3=1.14e-06 H4=2.81e-08 H5=9.94e-08 H6=1.35e-08 H7=5.15e-07 H8=1.38e-07 H9=5.76e-07 H10=3.09e-08 H11=4.98e-08 H12=2.61e-09 H13=8.16e-09
+[F_s_l16.0] norb=208 243s norm_err=5.2e-10  peak internal field=1.082 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00059/0.00058/0.00055  Nh=0.00062/0.00058/0.00055  hot=0.00003 | metal holes=0.00000  Eabs=0.0042 eV  EH=0.0000 eV
+   H1=2.34e-01 H2=1.98e-05 H3=3.21e-05 H4=4.42e-07 H5=5.24e-06 H6=2.96e-06 H7=1.50e-05 H8=4.46e-05 H9=5.10e-04 H10=4.67e-05 H11=2.44e-04 H12=9.89e-06 H13=2.06e-05
+[E_b_D5.7] norb=160 174s norm_err=1.8e-10  peak internal field=1.015 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00012/0.00012/0.00011  Nh=0.00013/0.00013/0.00014  hot=0.00001 | metal holes=0.00000  Eabs=0.0009 eV  EH=0.0000 eV
+   H1=7.25e-02 H2=6.09e-06 H3=6.61e-06 H4=1.14e-07 H5=5.69e-07 H6=1.39e-07 H7=4.95e-06 H8=2.85e-06 H9=3.15e-05 H10=1.30e-06 H11=6.17e-06 H12=2.02e-07 H13=4.27e-07
+[E_j_dx] norb=209 325s norm_err=6.7e-10  peak internal field=1.283 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00684/0.00708/0.00442  Nh=0.00539/0.00538/0.00360  hot=0.00019 | metal holes=0.02254  Eabs=0.0573 eV  EH=0.0015 eV
+   H1=7.53e-02 H2=1.14e-05 H3=9.46e-06 H4=1.54e-05 H5=2.09e-05 H6=1.08e-05 H7=5.97e-06 H8=1.43e-05 H9=9.57e-07 H10=3.52e-06 H11=2.07e-06 H12=1.95e-06 H13=7.52e-07
+[W_j_3200] norb=209 350s norm_err=3.1e-10  peak internal field=1.244 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00957/0.00805/0.00675  Nh=0.00775/0.00671/0.00559  hot=0.00023 | metal holes=0.02265  Eabs=0.0739 eV  EH=0.0037 eV
+   H1=3.19e-02 H2=3.42e-06 H3=8.30e-06 H4=5.64e-06 H5=1.77e-06 H6=1.00e-05 H7=4.84e-06 H8=1.38e-05 H9=2.82e-05 H10=2.95e-05 H11=7.62e-05 H12=1.69e-04 H13=7.44e-05
+[E_j_dt005] norb=209 423s norm_err=3.6e-10  peak internal field=1.283 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00684/0.00708/0.00443  Nh=0.00539/0.00538/0.00360  hot=0.00019 | metal holes=0.02256  Eabs=0.0569 eV  EH=0.0015 eV
+   H1=7.53e-02 H2=1.13e-05 H3=9.48e-06 H4=1.54e-05 H5=2.09e-05 H6=1.08e-05 H7=5.99e-06 H8=1.43e-05 H9=9.55e-07 H10=3.57e-06 H11=2.07e-06 H12=1.90e-06 H13=6.58e-07
+[W_s_3200] norb=208 366s norm_err=8.4e-10  peak internal field=1.023 V/nm
+   bulk carriers (window 2/4/8 cells): Nc=0.00005/0.00005/0.00005  Nh=0.00005/0.00005/0.00004  hot=0.00001 | metal holes=0.00000  Eabs=0.0006 eV  EH=0.0000 eV
+   H1=3.12e-02 H2=2.65e-06 H3=1.90e-06 H4=5.27e-08 H5=7.03e-08 H6=5.58e-09 H7=2.87e-08 H8=4.12e-09 H9=4.67e-08 H10=8.69e-09 H11=2.45e-07 H12=7.65e-08 H13=2.07e-06

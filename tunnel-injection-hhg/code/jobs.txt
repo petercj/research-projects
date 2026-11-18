@@ -1,0 +1,49 @@
+variant=junction D0=2.3 tag=A_j_D2.3
+variant=spacer dsp=1.5 D0=2.3 N=3200 Ltot=1000.0 tag=A_s_D2.3
+variant=junction D0=3.4 tag=A_j_D3.4
+variant=spacer dsp=1.5 D0=3.4 N=3200 Ltot=1000.0 tag=A_s_D3.4
+variant=junction D0=4.6 tag=A_j_D4.6
+variant=spacer dsp=1.5 D0=4.6 N=3200 Ltot=1000.0 tag=A_s_D4.6
+variant=junction D0=5.7 snap=32 tag=A_j_D5.7
+variant=spacer dsp=1.5 D0=5.7 snap=32 N=3200 Ltot=1000.0 tag=A_s_D5.7
+variant=junction D0=6.8 tag=A_j_D6.8
+variant=spacer dsp=1.5 D0=6.8 N=3200 Ltot=1000.0 tag=A_s_D6.8
+variant=junction D0=8.5 tag=A_j_D8.5
+variant=spacer dsp=1.5 D0=8.5 N=3200 Ltot=1000.0 tag=A_s_D8.5
+variant=junction D0=11.4 tag=A_j_D11.4
+variant=spacer dsp=1.5 D0=11.4 N=3200 Ltot=1000.0 tag=A_s_D11.4
+variant=junction D0=5.7 phiB=0.3 tag=C_j_phi0.3
+variant=junction D0=5.7 phiB=0.5 tag=C_j_phi0.5
+variant=junction D0=5.7 phiB=1.0 tag=C_j_phi1.0
+variant=junction D0=5.7 phiB=1.4 tag=C_j_phi1.4
+variant=junction D0=5.7 phiB=1.67 tag=C_j_phi1.67
+variant=junction D0=5.7 phiB=2.0 tag=C_j_phi2.0
+variant=junction D0=5.7 phiB=2.3 tag=C_j_phi2.3
+variant=junction D0=5.7 phiB=2.6 tag=C_j_phi2.6
+variant=spacer dsp=0.125 D0=5.7 N=3200 Ltot=1000.0 tag=D_s_d0.125
+variant=spacer dsp=0.25 D0=5.7 N=3200 Ltot=1000.0 tag=D_s_d0.25
+variant=spacer dsp=0.375 D0=5.7 N=3200 Ltot=1000.0 tag=D_s_d0.375
+variant=spacer dsp=0.5 D0=5.7 N=3200 Ltot=1000.0 tag=D_s_d0.5
+variant=spacer dsp=0.75 D0=5.7 N=3200 Ltot=1000.0 tag=D_s_d0.75
+variant=spacer dsp=1.0 D0=5.7 N=3200 Ltot=1000.0 tag=D_s_d1.0
+variant=junction hartree=0 D0=0.5 tag=B_j_D0.5
+variant=junction hartree=0 D0=1.0 tag=B_j_D1.0
+variant=junction hartree=0 D0=1.5 tag=B_j_D1.5
+variant=junction hartree=0 D0=2.0 tag=B_j_D2.0
+variant=junction D0=5.7 ncyc=8 tag=I_j_D5.7
+variant=spacer dsp=1.5 D0=5.7 ncyc=8 N=3200 Ltot=1000.0 tag=I_s_D5.7
+variant=junction D0=8.5 ncyc=8 tag=I_j_D8.5
+variant=spacer dsp=1.5 D0=8.5 ncyc=8 N=3200 Ltot=1000.0 tag=I_s_D8.5
+variant=junction D0=5.7 ell=4.0 tag=F_j_l4.0
+variant=spacer dsp=1.5 D0=5.7 ell=4.0 N=3200 Ltot=1000.0 tag=F_s_l4.0
+variant=junction D0=5.7 ell=16.0 tag=F_j_l16.0
+variant=spacer dsp=1.5 D0=5.7 ell=16.0 N=3200 Ltot=1000.0 tag=F_s_l16.0
+variant=junction D0=5.7 dt=0.05 tag=E_j_dt005
+variant=bare D0=5.7 tag=E_b_D5.7
+variant=junction D0=5.7 N=4096 Ltot=960.0 tag=E_j_dx
+variant=junction D0=5.7 lam=3200.0 tag=W_j_3200
+variant=spacer dsp=1.5 D0=5.7 lam=3200.0 N=3200 Ltot=1000.0 tag=W_s_3200
+variant=junction D0=5.7 tag=K_80_240
+variant=junction D0=5.7 Lm=400.0 N=3584 Ltot=1120.0 tag=K_80_400
+variant=junction D0=5.7 Lm=640.0 N=4480 Ltot=1400.0 tag=K_80_640
+variant=junction D0=5.7 ncell=120 N=4096 Ltot=1280.0 tag=K_120_240

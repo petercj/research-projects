@@ -1,0 +1,7 @@
+__pycache__/
+*.aux
+*.log
+*.out
+*.blg
+*Notes.bib
+*.synctex.gz

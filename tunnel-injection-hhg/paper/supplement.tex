@@ -1,0 +1,121 @@
+\documentclass[aps,prl,onecolumn,superscriptaddress,notitlepage]{revtex4-2}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\setlength{\tabcolsep}{7pt}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\begin{document}
+\title{Supplemental Material for ``Sub-cycle rectification at the metal contact in antenna-enhanced
+high-harmonic generation from solids''}
+\author{[Author list to be completed]}
+\maketitle
+
+\section{Model}
+All quantities are in atomic units unless stated otherwise. The coordinate $z$ runs along the field
+line that leaves the metal; the metal occupies $-L_m<z<0$ and the crystal $d<z<d+L_c$, where $d$ is
+the thickness of an optional insulating spacer. The static single-particle potential is
+\begin{equation}
+V(z)=\begin{cases}
+V_m, & -L_m<z<0 \quad\text{(metal)},\\
+E_c+h_s, & 0<z<d \quad\text{(spacer)},\\
+-V_0\{1+\cos[2\pi(z-d)/a]\}, & d<z<d+L_c \quad\text{(crystal)},\\
+E_c+\chi, & \text{elsewhere (vacuum)},
+\end{cases}
+\end{equation}
+with all steps smoothed by $\tfrac12[1+\tanh(z/w)]$, $w=1.5$. The parameters are $a=8$ (0.423~nm),
+$V_0=0.32$, which gives band edges $E_v=-1.05$~eV and $E_c=2.28$~eV relative to the maxima of the
+crystal potential and a gap $E_g=3.34$~eV between the second and third bands; electron affinity
+$\chi=4$~eV; spacer barrier $h_s=3.1$~eV; and $V_m=E_{\rm F}-5.5$~eV, where the Fermi level
+$E_{\rm F}=E_c-\Phi_{\rm B}$ is set by the Schottky barrier. The reference geometry has
+$L_m=240$ (12.7~nm) and $L_c=80a$ (33.9~nm). Each spatial orbital below $E_{\rm F}$ is doubly
+occupied. The metal electron density is $2k_{\rm F}/(\pi a^2)=4.3\times10^{22}$~cm$^{-3}$
+and its plasma frequency is 7.7~eV.
+
+The time-dependent part of the Hamiltonian is $D(t)g(z)+U_{\rm H}(z,t)$. The first term is the
+potential of an external charge sheet at the metal surface, which represents the oscillating
+surface charge of the antenna, with
+\begin{equation}
+g(z)=\begin{cases}0,& z<0,\\ z/\varepsilon_s, & 0<z<d,\\ d/\varepsilon_s+\ell\,[1-e^{-(z-d)/\ell}], & z>d,\end{cases}
+\end{equation}
+where $\ell$ models the decay of the near field into the crystal and $\varepsilon_s=3.9$ is the
+permittivity of the (passive) spacer. The driving waveform is
+$D(t)=D_0\sin^2(\pi t/\tau)\cos[\omega(t-\tau/2)]$ for $0<t<\tau$. The induced Hartree potential
+obeys the planar Poisson equation
+\begin{equation}
+\partial_z^2U_{\rm H}(z,t)=-4\pi\,\frac{2}{a^2}\Big[\sum_j|\psi_j(z,t)|^2-\sum_j|\psi_j(z,0)|^2\Big],
+\end{equation}
+with vanishing field far to the left; because the induced charge integrates to zero the field also
+vanishes far to the right. The static potential plays the role of a frozen ground-state Kohn--Sham
+potential, so the treatment corresponds to the time-dependent Hartree (random-phase) approximation
+for the induced field; exchange-correlation and image-potential effects are not included.
+
+\section{Numerical method and observables}
+The orbitals are represented on a uniform grid ($\Delta z=0.3125$, $N=3072$ points in the reference
+geometry) with periodic boundary conditions and vacuum margins that prevent overlap across the
+boundary. The initial states are obtained by exact diagonalization of the static Hamiltonian with
+the Fourier representation of the kinetic energy. They are propagated with the second-order
+split-operator method, $\Delta t=0.1$. Since the potential step does not change the density, the
+Hartree potential evaluated after each kinetic step is time centered. The Poisson equation is
+integrated with a staggered discretization (field at half-integer grid points), which makes the
+discrete Coulomb kernel symmetric; a non-symmetric discretization renders the plasma oscillation
+of the metal weakly unstable.
+
+The internal field $F(t)$ is the difference of $D(t)g+U_{\rm H}$ between the end of the fifth and the
+end of the first unit cell of the crystal divided by their distance, i.e., the field averaged over
+0.4 to 2.1~nm from the interface. $F_+$ and $F_-$ are its extrema of the two polarities, and
+$F_{\rm dc}$ is its mean over the two central cycles of the pulse. $F_0$ is the peak of $F$ for the
+insulated junction ($d=1.5$~nm) at the same $D_0$. The emission spectrum is
+$S(\Omega)=|\int dt\,w(t)\dot J(t)e^{i\Omega t}|^2$ with $J=\sum_j\langle\psi_j|p|\psi_j\rangle$ and a
+Hann window; harmonic yields $S_n$ are integrals of $S$ over $(n\pm\tfrac12)\omega$. The even-to-odd ratio is $(S_4+S_6)/(S_3+S_5)$. The absorbed energy
+is $W=2\sum_k(n_k-n_k^0)E_k/a^2$, where $n_k$ are the occupations of the static eigenstates after
+the pulse. The sheet densities quoted in the main text follow from Gauss's law with the effective
+permittivity $\varepsilon=D_0/F_0$.
+
+\section{Field dependence}
+Table~\ref{tab:field} lists the data underlying Fig.~3(a) and 3(b) of the main text.
+\begin{table}[h]
+\caption{Field scan for $\Phi_{\rm B}=0.7$~eV, $\ell=8$~nm, wavelength 2.1~$\mu$m, five-cycle pulse.}
+\label{tab:field}
+\input{tab_field.tex}
+\end{table}
+
+\section{Convergence}
+Table~\ref{tab:conv} shows the dependence of the main observables on the numerical parameters and on
+the size of the system for the contacted junction at $D_0=5.7$~V/nm ($F_0=1.0$~V/nm).
+\begin{table}[h]
+\caption{Convergence tests for the contacted junction at $F_0=1.0$~V/nm. $S_n$ is the yield of the
+$n$th harmonic.}
+\label{tab:conv}
+\input{tab_conv.tex}
+\end{table}
+
+\section{Near-field decay length, wavelength, and pulse duration}
+Table~\ref{tab:extra} collects additional runs at $D_0=5.7$~V/nm. The crystal without any metal
+behaves like the insulated junction. For the contacted junction the rectification
+($F_-$, $F_+$, $F_{\rm dc}$) depends only weakly on the decay length $\ell$ of the near field and on
+the driving wavelength, and the even-to-odd ratio stays of order unity (0.55 to 1.6), compared with
+0.03 to 0.09 without the contact. The quasistatic field and the even-to-odd ratio increase with the
+number of cycles, as expected for a charge that accumulates from cycle to cycle. Note that $F$ is
+averaged over a fixed window, so that for $\ell=4$~nm the insulated peak value is lower at the same
+$D_0$.
+\begin{table}[h]
+\caption{Additional runs at $D_0=5.7$~V/nm.}
+\label{tab:extra}
+\input{tab_extra.tex}
+\end{table}
+
+\section{Far-field parity of the contact emission}
+Consider an antenna with mirror symmetry $x\to-x$ driven at its dipolar resonance. Let $\hat n_{\rm R}$
+and $\hat n_{\rm L}=-\hat n_{\rm R}$ be the outward in-plane normals of the two ends. The in-plane near
+field has the same sign at both ends, so the field component along the outward normal obeys
+$E_{\rm L}(t)=-E_{\rm R}(t)=E_{\rm R}(t+T/2)$ for a periodic driver: the left end is driven like the
+right end half a period later. The current along the outward normal at the left end is therefore
+$j(t+T/2)$ if $j(t)$ is that at the right end, and the in-plane currents are
+$J_{x,{\rm R}}=j(t)$ and $J_{x,{\rm L}}=-j(t+T/2)$. The $n$th Fourier component of their sum is
+proportional to $1-e^{-in\pi}=1-(-1)^n$, so even harmonics cancel in the direction normal to the
+surface and odd harmonics add. This holds for any source that depends only on the local field
+relative to the outward normal, including the field-gradient mechanism. Even harmonics survive off
+axis, in odd diffraction orders of an array, and for antennas without mirror symmetry.
+\end{document}
