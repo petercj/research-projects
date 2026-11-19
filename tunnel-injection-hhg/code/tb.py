@@ -206,7 +206,9 @@ def calibrate_Ac(p):
     return np.sqrt(lo * hi)
 
 def run_1d(D0=1.0, contact=True, hartree=True, ell_nm=8.0, lam_nm=2000.0, ncyc=5, dt=0.2, nm_layers=60,
-           nc_layers=160, p=None, Ac=None, tag=None, snap=0, **over):
+           nc_layers=160, p=None, Ac=None, tag=None, snap=0, profile=None, **over):
+    """profile: optional (depth_nm, e) arrays; the external field then decays with depth as e(depth)
+    (e.g. from nearfield.py) instead of exp(-depth/ell)."""
     p = dict(ZNO if p is None else p); p.update(over)
     Ac = Ac if Ac is not None else calibrate_Ac(p)
     S, K = build_1d(p, nm_layers, nc_layers, contact, Ac)
@@ -214,7 +216,13 @@ def run_1d(D0=1.0, contact=True, hartree=True, ell_nm=8.0, lam_nm=2000.0, ncyc=5
     w, T, f = pulse(lam_nm, ncyc)
     b = p["b"]; z = S.z; ell = ell_nm * NM
     zI = -0.5 * b
-    g = np.where(z > zI, ell * (1 - np.exp(-(z - zI) / ell)), 0.0)
+    if profile is None:
+        g = np.where(z > zI, ell * (1 - np.exp(-(z - zI) / ell)), 0.0)
+    else:
+        zp = np.asarray(profile[0], float) * NM; ep = np.asarray(profile[1], float)
+        zf = np.linspace(0.0, max(z.max() - zI, zp.max()), 20001); ef = np.interp(zf, zp, ep)
+        G = np.concatenate(([0.0], np.cumsum(0.5 * (ef[1:] + ef[:-1]) * np.diff(zf))))
+        g = np.where(z > zI, np.interp(z - zI, zf, G), 0.0)
     Dau = D0 / VNM
     q_of = lambda ps: (np.abs(ps) ** 2).sum(1)
     cz = z > zI
@@ -262,11 +270,14 @@ if __name__ == "__main__":
             print("    " + " ".join(f"H{n}={Y[n-1]/Y[0]:.1e}" for n in range(2, 12)))
 
 # ----------------------------------------------------------------------------- 2D strip array
-def build_2d(p, Nx=56, Nz=22, Wm=24, Hm=6, contact="both", Ly=None):
+def build_2d(p, Nx=56, Nz=22, Wm=24, Hm=6, contact="both", Ly=None, bevel=0):
     """Periodic (in x) array of metal strips, Wm x Hm sites, on a crystal slab of Nx x Nz sites.
 
     contact: "both" (intimate contact), "none" (hopping across the contact switched off) or
-             "right" (only the right half of the strip is in contact)."""
+             "right" (only the right half of the strip is in contact).
+    bevel:   if > 0, the right end of the strip is a wedge whose tip touches the crystal: metal layer h
+             (h = 0 next to the crystal) ends bevel*h sites before the right edge. The left end stays vertical.
+    The structure has an exact mirror plane (through a column of sites) only if Wm is odd and bevel = 0."""
     b = p["b"]; tsp, tpp, es, ep = derived(p)
     assert Nx % 2 == 0
     i0 = (Nx - Wm) // 2; i1 = i0 + Wm - 1
@@ -278,7 +289,7 @@ def build_2d(p, Nx=56, Nz=22, Wm=24, Hm=6, contact="both", Ly=None):
             sites[(i, j)] = len(sites)
         orb[(kind, i, j)] = len(xs); xs.append(i * b); zs.append(j * b); kinds.append(kind); site.append(sites[(i, j)])
     for j in range(-Hm, 0):
-        for i in range(i0, i1 + 1):
+        for i in range(i0, i1 + 1 - bevel * (-j - 1)):
             add("m", i, j)
     for j in range(Nz):
         for i in range(Nx):
@@ -363,13 +374,13 @@ def calibrate_Ly(p):
     return np.sqrt(lo * hi)
 
 def run_2d(F0=0.4, contact="both", lam_nm=2000.0, ncyc=5, dt=0.4, order=6, Nx=56, Nz=22, Wm=24, Hm=6,
-           Ly=None, p=None, tag=None, hartree=True, snap=8, **over):
+           Ly=None, p=None, tag=None, hartree=True, snap=8, cep=0.0, bevel=0, **over):
     """F0: amplitude of the macroscopic in-plane field (V/nm)."""
     p = dict(ZNO if p is None else p); p.update(over)
-    S, K = build_2d(p, Nx, Nz, Wm, Hm, contact, Ly)
+    S, K = build_2d(p, Nx, Nz, Wm, Hm, contact, Ly, bevel)
     E, U = np.linalg.eigh(S.H0); occ = E < 0
     psi0 = U[:, occ]
-    w, T, f = pulse(lam_nm, ncyc)
+    w, T, f = pulse(lam_nm, ncyc, cep)
     tt = np.linspace(0, T, 20001); Fau = F0 / VNM
     At = np.concatenate(([0.0], np.cumsum(0.5 * (np.array([f(x) for x in tt[1:]]) + np.array([f(x) for x in tt[:-1]])) * np.diff(tt)))) * Fau
     A_of_t = lambda t: np.interp(t, tt, At)
@@ -412,7 +423,7 @@ def run_2d(F0=0.4, contact="both", lam_nm=2000.0, ncyc=5, dt=0.4, order=6, Nx=56
                QR=rec[:, 7], QL=rec[:, 8], F=rec[:, 9:17] * VNM, w=w, T=T, Ly=S.Ly, Eabs=float(((nk - occ) * E).sum()),
                snaps_t=np.array(snaps_t), snaps=np.array(snaps), sx=S.sx, sz=S.sz, Fmacro=np.array([F0 * f(x) for x in t]),
                norm=float(np.abs((np.abs(psi) ** 2).sum(0) - 1).max()), secs=time.time() - t0, F0=F0, contact=contact,
-               Nx=Nx, Nz=Nz, Wm=Wm, Hm=Hm, b=b, ncyc=ncyc, lam_nm=lam_nm, nocc=int(occ.sum()), norb=S.n)
+               Nx=Nx, Nz=Nz, Wm=Wm, Hm=Hm, b=b, ncyc=ncyc, lam_nm=lam_nm, nocc=int(occ.sum()), norb=S.n, cep=cep, bevel=bevel)
     if tag:
         os.makedirs(DATA, exist_ok=True); np.savez_compressed(os.path.join(DATA, tag + ".npz"), **out)
     return out

@@ -1,4 +1,4 @@
-"""usage: python run2d.py tag key=value ...  (keys: F0, contact, Nx, Nz, Wm, Hm, ncyc, dt, lam_nm, phiB_eV)"""
+"""usage: python run2d.py tag key=value ...  (keys: F0, contact, Nx, Nz, Wm, Hm, ncyc, dt, lam_nm, phiB_eV, cep, bevel)"""
 import sys, time, numpy as np
 from tb import *
 tag = sys.argv[1]; kw = {}
@@ -6,7 +6,7 @@ for a in sys.argv[2:]:
     k, v = a.split("=")
     if k == "contact": kw[k] = v
     elif k == "phiB_eV": kw["phiB"] = float(v) / EV
-    elif k in ("Nx", "Nz", "Wm", "Hm", "ncyc", "order", "snap"): kw[k] = int(v)
+    elif k in ("Nx", "Nz", "Wm", "Hm", "ncyc", "order", "snap", "bevel"): kw[k] = int(v)
     else: kw[k] = float(v)
 p = dict(ZNO); kw.setdefault("Ly", 1.019 * p["b"])
 o = run_2d(tag=tag, **kw)
