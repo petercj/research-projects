@@ -20,7 +20,7 @@ if __name__ == "__main__":
     ref = L("1d_A_i_D5.5") if have("1d_A_i_D5.5") else None
     for title, pat, key in (("barrier scan (D0=5.5)", "1d_C_c_phi*", "_phi"), ("contact hopping scan (D0=5.5)", "1d_D_c_t*", "_t")):
         print("===", title)
-        for f in sorted(glob.glob(os.path.join(DATA, pat + ".npz")), key=lambda s: float(s.split(key)[-1][:-4])):
+        for f in sorted((g for g in glob.glob(os.path.join(DATA, pat + ".npz")) if not g.endswith("_lin.npz")), key=lambda s: float(s.split(key)[-1][:-4])):
             c = L(os.path.basename(f)[:-4]); fm, fp, fd = f1(c); Y = c["Y"]
             print(f"   {key[1:]}={f.split(key)[-1][:-4]:>5s}: F-={fm:.2f} F+={fp:.2f} Fdc={fd:+.3f} W={float(c['Eabs'])*KA(c):.4f} e/o={eo(Y):.2f} H4/H1={Y[3]/Y[0]:.1e} H6/H1={Y[5]/Y[0]:.1e}")
     print("=== other 1D runs (D0=5.5 unless noted)")
