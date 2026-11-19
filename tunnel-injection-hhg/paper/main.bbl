@@ -306,8 +306,8 @@
 \bibitem [{SM()}]{SM}%
   \BibitemOpen
   \href@noop {} {}\bibinfo {note} {See Supplemental Material at [URL will be
-  inserted by publisher] for details of the model and numerics, convergence
-  tests, tabulated data, additional runs, and the far-field parity
+  inserted by publisher] for details of the models and numerics, tabulated
+  data, convergence tests, the continuum-model check, and the far-field parity
   rule.}\BibitemShut {Stop}%
 \bibitem [{\citenamefont {Vampa}\ \emph {et~al.}(2018)\citenamefont {Vampa}
   \emph {et~al.}}]{vampa2018}%

@@ -8,41 +8,45 @@ high-harmonic generation (HHG) in the hot spot of a plasmonic nanoantenna.
 | Path | What it is |
 |---|---|
 | `paper/main.tex`, `paper/main.pdf` | The Letter (REVTeX 4.2, PRL format) |
-| `paper/supplement.tex`, `paper/supplement.pdf` | Supplemental Material: model, numerics, convergence, extra runs |
+| `paper/supplement.tex`, `paper/supplement.pdf` | Supplemental Material: models, numerics, tables, convergence, continuum-model check |
 | `paper/refs.bib` | Bibliography (entries checked against Crossref) |
-| `code/junction.py` | The simulation: 1D real-space TDSE for a metal–crystal junction with the induced Hartree field |
-| `code/jobs.txt` | Parameter sets of every run used in the paper |
-| `code/figures.py` | Produces `figures/fig1.pdf` … `fig3.pdf` |
-| `code/report_numbers.py` | Prints every number quoted in the text |
-| `code/make_tables.py` | Writes the tables of the Supplemental Material |
-| `data/*.npz` | Full output of every run (time traces, occupations, snapshots) |
-| `data/summary.json`, `data/numbers.txt` | Scalar results of all runs and the numbers quoted in the text |
-| `data/runlog.txt` | Console log of the production runs |
+| `code/tb.py` | Main model: tight-binding gold–ZnO junction with the self-consistent Hartree field, as a chain (`run_1d`) and as a 2D strip array (`run_2d`) |
+| `code/jobs_tb1d.py` | All chain-model runs of the paper (field, barrier and contact-hopping scans, convergence, low-field references) |
+| `code/run2d.py` | Command-line driver for one 2D run |
+| `code/figures_tb.py` | Produces `figures/fig1.pdf` … `fig3.pdf` and `figS_harm.pdf` |
+| `code/make_tables_tb.py`, `code/report_tb.py` | Tables of the Supplemental Material and the numbers quoted in the text |
+| `data_tb/*.npz` | Output of every tight-binding run (`1d_*`: chain; `G1_*`, `G2_*`, `G1c8_*`: 2D) |
+| `code/junction.py`, `code/jobs.txt`, `code/figures.py`, `code/make_tables.py`, `code/report_numbers.py` | Independent continuum model (real-space grid) used as a check in the Supplement; writes `figures/figS1.pdf` … `figS3.pdf` |
+| `data/*.npz`, `data/summary.json`, `data/numbers.txt` | Output of the continuum-model runs |
 
 ## Reproducing
 
 ```bash
 pip install numpy scipy matplotlib
 cd code
-cat jobs.txt | xargs -P 4 -I{} sh -c "OMP_NUM_THREADS=1 python3 junction.py {}"
-python3 figures.py
-python3 report_numbers.py
-python3 make_tables.py
-python3 make_summary.py
+OMP_NUM_THREADS=1 python3 jobs_tb1d.py          # chain model, about 100 runs of 1-3 minutes each
+for c in none right both; do for F in 0.025 0.5 0.75; do
+  OMP_NUM_THREADS=1 python3 run2d.py G1_F${F}_${c} F0=$F contact=$c Nx=64 Nz=22 Wm=32 Hm=4
+done; done                                      # 2D model, about 22 minutes per run
+python3 figures_tb.py && python3 make_tables_tb.py
+cat jobs.txt | xargs -P 4 -I{} sh -c "OMP_NUM_THREADS=1 python3 junction.py {}"   # continuum model
+python3 figures.py && python3 make_tables.py
 cd ../paper && latexmk -pdf main.tex && latexmk -pdf supplement.tex
 ```
 
-One run takes four to ten minutes on a single core; the full set of 49 runs is about four core-hours.
-The `tag=` of each job is the file name of its output in `data/`.
+The convergence runs of the 2D model use `Nz=32` (tags `G2_*`) and `ncyc=8` (tags `G1c8_*`).
 
-## Model in one paragraph
+## Models in one paragraph
 
-Electrons move along the field line that leaves the antenna edge. The metal is a jellium slab, the
-crystal a Mathieu-type periodic potential with a 3.34 eV gap, and the Fermi level sits a Schottky
-barrier below the conduction band. The antenna's surface charge is an external sheet whose field
-decays into the crystal over the near-field length. All occupied orbitals are propagated, and the
-planar Hartree potential of the induced density is included self-consistently; it accounts for
-dielectric screening, metallic screening and the space charge of injected carriers.
+Main model: a tight-binding crystal (cation s and anion p orbitals on a square lattice) with the
+gap, effective masses, density and permittivity of ZnO, a single-band metal with the Fermi velocity
+of gold, and a Schottky barrier of 0.7 eV. All occupied orbitals are propagated and the Hartree
+potential of the induced charge is included self-consistently; it accounts for dielectric
+screening, metallic screening and the space charge of injected carriers. In the chain geometry
+the antenna near field is prescribed. In the 2D geometry only a uniform in-plane field is applied
+and the near field at the edges of a metal strip results from the calculation. The continuum model
+(jellium metal, Mathieu-type crystal potential, explicit insulating spacer) reproduces the results
+independently.
 
 ## Status
 

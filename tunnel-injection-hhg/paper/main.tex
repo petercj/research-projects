@@ -21,18 +21,13 @@
 \date{\today}
 
 \begin{abstract}
-Metallic nanoantennas are used to enhance high-harmonic generation in solids and are modeled as
-passive concentrators of the driving field. We show that this picture fails where the metal
-touches the crystal. Time-dependent simulations of a gold--ZnO contact that include the
-self-consistent space-charge field show that electrons tunnel through the Schottky barrier
-during one half-cycle only. The injected sheet of a few $10^{12}$~cm$^{-2}$ strengthens the near
-field in the opposite half-cycle by up to 30\% and leaves a quasistatic bias of up to 20\% of
-the driving amplitude. Below the threshold for interband excitation the contact raises the
-deposited energy by two to three orders of magnitude and makes even harmonics as strong as odd
-ones. A two-dimensional simulation of an antenna edge, in which the near field is generated
-self-consistently, shows that the rectified current flows along the surface and radiates a second
-harmonic two to three orders of magnitude above that of an insulated antenna. The bias reverses
-sign when the Fermi level crosses midgap, and all effects vanish when the contact is opened.
+Metallic nanoantennas that enhance high-harmonic generation in solids are modeled as passive
+field concentrators. We show that this picture fails where the metal touches the crystal.
+Simulations of a gold--ZnO contact with the self-consistent space-charge field show that
+electrons tunnel through the Schottky barrier during one half-cycle only. The injected charge
+biases the near field by up to 20\% of its amplitude, raises the deposited energy by orders of
+magnitude, and makes even harmonics as strong as odd ones. At an antenna edge the rectified
+current radiates a strong second harmonic.
 \end{abstract}
 
 \maketitle
@@ -65,8 +60,7 @@ not been examined.
 
 \begin{figure*}
 \includegraphics[width=\textwidth]{fig1.pdf}
-\caption{(a) Geometry and band alignment: the hot spot of an antenna sits at a metal--semiconductor
-contact, where electrons need to tunnel only through the Schottky barrier $\PhiB$. (b) Field
+\caption{(a) Geometry and band alignment at the antenna edge. (b) Field
 inside the crystal for the contacted (solid) and insulated (dashed) gold--ZnO junction at
 $\Fz=1.2$~V/nm. (c) Electron sheet density in the crystal beyond the first two atomic layers
 in excess of the insulated case. (d) Layer-averaged induced electron density in excess of the
@@ -83,10 +77,10 @@ establish this for parameters of
 gold on ZnO~\cite{imasaka2018}, first along the field line that leaves the contact and then
 for a two-dimensional antenna edge.
 
-\textit{Model.}---The junction is described by the tight-binding Hamiltonian (atomic units)
+\textit{Model.}---The junction is described by the tight-binding Hamiltonian (atomic units; $U^{\rm ext}$, $U^{\rm H}$, and $A$ depend on time)
 \begin{equation}
-H=\sum_i\big[\epsilon_i+U^{\rm ext}_i(t)+U^{\rm H}_i(t)\big]c_i^\dagger c_i^{}
-+\sum_{i\neq j}t_{ij}\,e^{iA(t)(x_i-x_j)}c_i^\dagger c_j^{} .
+H=\sum_i\big[\epsilon_i+U^{\rm ext}_i+U^{\rm H}_i\big]c_i^\dagger c_i^{}
++\sum_{i\neq j}t_{ij}\,e^{iA(x_i-x_j)}c_i^\dagger c_j^{} .
 \label{eq:H}
 \end{equation}
 The crystal is a square lattice with spacing $b=0.228$~nm on which cations carry an $s$ orbital
@@ -135,8 +129,7 @@ of $F$ over the two central cycles, corresponds by Gauss's law to a sheet densit
 \sigma\simeq\varepsilon\varepsilon_0F_{\rm dc}/e\approx5\times10^{12}~{\rm cm}^{-2},
 \label{eq:gauss}
 \end{equation}
-in agreement with the charge counted directly in Fig.~\ref{fig1}(c). This is one sixth of
-the surface charge density $\varepsilon_0D_0/e$ of the antenna itself.
+in agreement with the charge counted directly in Fig.~\ref{fig1}(c).
 
 \begin{figure*}
 \includegraphics[width=\textwidth]{fig2.pdf}
@@ -216,8 +209,7 @@ length remain in the crystal [Fig.~\ref{fig2}(c)], and the absorbed energy is 39
 the insulated strip. In the emission polarized along the driver the second harmonic is 90
 times stronger than for the insulated strip (800 times at $\Fm=0.5$~V/nm) and the fourth is
 four times stronger, while the odd orders change by less than a factor of two
-[Fig.~\ref{fig2}(d)]. At these fields the higher orders come from the whole slab, which the
-contact does not affect. CONVSENTENCE With both halves in contact the absorbed energy doubles
+[Fig.~\ref{fig2}(d)].  CONVSENTENCE With both halves in contact the absorbed energy doubles
 again and the third harmonic grows 13-fold, which we attribute to charge exchanged between
 the two edges of this short strip.
 
@@ -254,8 +246,8 @@ In summary, a metal antenna in contact with a semiconductor is not a passive fie
 concentrator. It injects a space-charge-limited sheet of carriers in every cycle, and the
 field of that sheet rectifies the near field that drives the crystal. A sub-nanometer spacer switches the effect off, which gives experiments a simple control
 and antenna design a new degree of freedom: the contact can be removed where clean spectra
-and high damage thresholds are wanted, or engineered through the barrier height where a
-built-in sub-cycle bias is useful, for instance for even harmonics from centrosymmetric crystals or for lightwave-driven currents~\cite{schiffrin2013}.
+and high damage thresholds are wanted, or engineered through the barrier height where a sub-cycle bias is useful, as for
+lightwave-driven currents~\cite{schiffrin2013}.
 
 % TODO(authors): add funding acknowledgments and the statement on the use of AI tools required by APS.
 \begin{acknowledgments}

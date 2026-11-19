@@ -124,7 +124,7 @@ def fig2(F0="0.75", tsnap=3.0):
     T = 2 * np.pi / float(c["w"]); b = float(c["b"]); Nx, Nz, Wm, Hm = int(c["Nx"]), int(c["Nz"]), int(c["Wm"]), int(c["Hm"])
     Ly = float(c["Ly"]); i0 = (Nx - Wm) // 2
     # (a) induced electron density of the one-sided contact minus insulated
-    ax = fig.add_axes([0.055, 0.2, 0.36, 0.72])
+    ax = fig.add_axes([0.055, 0.2, 0.36, 0.62])
     k = np.argmin(abs(r["snaps_t"] / T - tsnap))
     d = (r["snaps"][k] - i["snaps"][np.argmin(abs(i["snaps_t"] / T - tsnap))]) * 2 / (Ly * b * b) * NM ** 3   # electrons per nm^3
     ix = np.rint(r["sx"] / b).astype(int); iz = np.rint(r["sz"] / b).astype(int)
@@ -189,7 +189,7 @@ def fig3():
     ax.semilogy(Fb, Wb, "^:", color=CI, ms=3, label=r"contact, $U_{\rm H}=0$")
     ax.semilogy(F0[sel], np.array(Wc)[sel], "o-", color=CJ, ms=3, label="contact")
     ax.semilogy(F0[sel], np.array(Wi)[sel], "s--", color=CS, ms=3, mfc="w", label="insulated")
-    ax.set_xlabel(r"$F_0$ (V/nm)"); ax.set_ylabel(r"absorbed energy (eV/nm$^2$)")
+    ax.set_xlabel(r"$F_0$ (V/nm)"); ax.set_ylabel(r"energy (eV/nm$^2$)")
     ax.legend(frameon=False, loc="lower right", fontsize=6, handlelength=1.8, borderaxespad=0.15, labelspacing=0.2)
     ax.set_xlim(0.25, 2.7); ax.set_ylim(2e-7, 60); ax.text(0.05, 0.9, "(a)", transform=ax.transAxes)
     ax = axs[1]
