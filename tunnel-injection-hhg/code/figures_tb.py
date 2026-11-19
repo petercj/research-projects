@@ -33,7 +33,7 @@ def W1(o):
 
 def lin_tag(tag):
     core = tag[3:]
-    key = core.rsplit("_D", 1)[0] if core[0] in "AB" else core
+    key = core.rsplit("_D", 1)[0] if core[0] in "ABP" else core
     return "1d_" + key + "_lin"
 
 def Y1(tag, orders=range(1, 14)):

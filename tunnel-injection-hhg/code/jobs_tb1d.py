@@ -25,8 +25,17 @@ for tag, kw in jobs:
     lin[key + "_lin"] = kw2
 jobs += list(lin.items())
 jobs += [("G_c_D5.5", dict(D0=5.5, contact=True, snap=32)), ("G_i_D5.5", dict(D0=5.5, contact=False, snap=32))]
-for D in (14.8, 18.5):
+for D in (14.8, 18.5, 21.5, 25.0, 29.0):
     jobs.append((f"A_c_D{D}", dict(D0=D, contact=True))); jobs.append((f"A_i_D{D}", dict(D0=D, contact=False)))
+# field scan with the depth profile of the near field below the edge of a 570 nm x 100 nm bar (nearfield.py)
+def _profile():
+    from compare_zno import near_field
+    s_, Fz, Fabs, Exmax2, zp, ep = near_field()
+    return (zp, ep)
+PROF = _profile()
+for D in (1.3, 1.9, 2.6, 3.2, 4.0, 4.8, 5.6, 6.5, 8.0, 10.0, 13.0, 17.0, 21.0, 25.0, 30.0):
+    jobs.append((f"P_c_D{D}", dict(D0=D, contact=True, profile=PROF))); jobs.append((f"P_i_D{D}", dict(D0=D, contact=False, profile=PROF)))
+jobs.append(("P_c_lin", dict(D0=DLIN, contact=True, profile=PROF))); jobs.append(("P_i_lin", dict(D0=DLIN, contact=False, profile=PROF)))
 
 def job(a):
     tag, kw = a
