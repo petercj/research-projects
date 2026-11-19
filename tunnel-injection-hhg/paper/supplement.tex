@@ -1,8 +1,9 @@
 \documentclass[aps,prl,onecolumn,superscriptaddress,notitlepage]{revtex4-2}
 \usepackage{graphicx}
+\graphicspath{{../figures/}}
 \usepackage{amsmath,amssymb}
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
-\setlength{\tabcolsep}{7pt}
+\setlength{\tabcolsep}{6pt}
 \renewcommand{\thefigure}{S\arabic{figure}}
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\theequation}{S\arabic{equation}}
@@ -12,10 +13,229 @@ high-harmonic generation from solids''}
 \author{[Author list to be completed]}
 \maketitle
 
-\section{Model}
-All quantities are in atomic units unless stated otherwise. The coordinate $z$ runs along the field
-line that leaves the metal; the metal occupies $-L_m<z<0$ and the crystal $d<z<d+L_c$, where $d$ is
-the thickness of an optional insulating spacer. The static single-particle potential is
+All quantities are in atomic units unless stated otherwise. We first document the tight-binding model of the main text and its additional data, then an
+independent continuum model, and finally the far-field parity rule.
+
+\section{Tight-binding model}
+\label{sec:model}
+\subsection{Crystal, metal, and contact}
+The crystal is a square lattice with site spacing $b$ in the $x$--$z$ plane and is uniform along
+$y$. Sites with $i+j$ even are cations and carry one $s$ orbital with energy $\epsilon_s$; the others
+are anions and carry $p_x$ and $p_z$ orbitals with energy $\epsilon_p$. Nearest neighbors are coupled
+by the $\sigma$ hopping $\mp t_{sp}$ between the $s$ orbital and the $p$ orbital that points along the
+bond (the sign follows the lobe facing the cation), and anions are coupled to their four
+second neighbors by a hopping $t_{pp}$ between like $p$ orbitals. The gap is direct at $\Gamma$,
+\begin{equation}
+E_g=\epsilon_s-\epsilon_p-4t_{pp},\qquad m_e=\frac{E_g}{8t_{sp}^2b^2},\qquad m_h=\frac{1}{4t_{pp}b^2},
+\end{equation}
+where $m_e$ is the conduction-band mass and $m_h$ the mass of the valence band that is not coupled
+to the conduction band along the direction of motion. Table~\ref{tab:par} lists the parameters. The
+spacing $b$ is chosen such that $2b^3$ equals the volume per formula unit of ZnO
+(0.0238~nm$^3$)~\cite{ozgur2005}. Energies are measured from the Fermi level, so that the
+conduction-band edge is at $\epsilon_s=\Phi_{\rm B}$. With two electrons per orbital below the Fermi
+level the valence ($p$) bands are full and the conduction ($s$) band is empty.
+
+The metal is a single band on the same lattice with hopping $-t_m$ and Fermi level $E_{{\rm F}m}$
+above the band bottom; the Fermi velocity at mid band, $2t_mb=0.63$, equals that of gold. Each metal
+site of the last layer is coupled by $-t_c$ to the crystal orbitals directly below it (the $s$ orbital
+of a cation or the $p_z$ orbital of an anion). The value $t_c=1.5$~eV is of the order of the hoppings
+within the two materials; its variation is shown in Fig.~3(d) of the main text. ``Insulated'' means
+$t_c=0$. The Schottky barrier $\Phi_{\rm B}=0.7$~eV lies in the range 0.6 to 1.2~eV reported for gold
+on ZnO~\cite{brillson2011}.
+
+\begin{table}[h]
+\caption{Parameters of the tight-binding model.}
+\label{tab:par}
+\begin{tabular}{lll}
+\hline\hline
+Quantity & Value & Fixed by \\
+\hline
+Site spacing $b$ & 0.228 nm & density of ZnO \\
+$s$--$p$ hopping $t_{sp}$ & 1.470 eV & $m_e=0.28$ \\
+$p$--$p$ hopping $t_{pp}$ & 0.458 eV & $m_h=0.8$ \\
+$\epsilon_s-\epsilon_p$ & 5.13 eV & $E_g=3.3$ eV \\
+$\epsilon_s$ & 0.70 eV & $\Phi_{\rm B}$ of Au on ZnO \\
+Metal hopping $t_m$ & 2.0 eV & Fermi velocity of Au \\
+Metal Fermi level $E_{{\rm F}m}$ & 4.0 eV & \\
+Contact hopping $t_c$ & 1.5 eV & varied in Fig.~3(d) \\
+High-frequency permittivity & 3.7 & ZnO; see ``Dielectric constant'' \\
+\hline\hline
+\end{tabular}
+\end{table}
+
+\subsection{Chain geometry}
+The states with zero momentum parallel to the interface form a chain along $z$ with one $s$ and
+one $p_z$ orbital per layer of thickness $b$; the $p$--$p$ hopping between adjacent layers becomes
+$2t_{pp}$. The reference chain has 60 metal layers (13.7~nm) and 160 crystal layers (36.5~nm). The
+external potential is that of a charge sheet at the metal surface, $z_I=-b/2$,
+\begin{equation}
+U^{\rm ext}(z,t)=D(t)\,\ell\,[1-e^{-(z-z_I)/\ell}]\quad(z>z_I),\qquad U^{\rm ext}=0\quad(z<z_I),
+\end{equation}
+with $D(t)=D_0\sin^2(\pi t/\tau)\cos[\omega(t-\tau/2)]$ for $0<t<\tau$. The Hartree potential is that
+of charge sheets,
+\begin{equation}
+U^{\rm H}_i(t)=-\frac{4\pi}{A_c}\sum_j|z_i-z_j|\,\delta q_j(t),
+\label{eq:h1}
+\end{equation}
+where $\delta q_j$ is the change of the occupation of orbital $j$ per spin and $A_c$ the area per
+chain.
+
+\subsection{Strip geometry}
+The two-dimensional system is periodic along $x$ with period $\Lambda=N_xb$ and contains a crystal
+slab of $N_z$ layers and a metal strip of $W_m\times H_m$ sites on top of it. The reference geometry
+has $N_x=64$, $N_z=22$, $W_m=32$, and $H_m=4$ (period 14.6~nm, slab 5.0~nm, strip
+7.3~nm $\times$ 0.9~nm; 2240 orbitals). The system is uniform along $y$ and only states with
+$k_y=0$ are included. The uniform driving field $F_{\rm m}(t)$, with the same time dependence as
+$D(t)$, enters through the Peierls phases of Eq.~(1) of the main text with
+$A(t)=\int_0^tF_{\rm m}(t')dt'$, and $U^{\rm ext}=0$. The Hartree potential is that of periodic
+arrays of line charges on the lattice sites,
+\begin{equation}
+U^{\rm H}_i(t)=-\frac{2}{L_y}\sum_j\ln\!\Big\{2\Big[\cosh\frac{2\pi(z_i-z_j)}{\Lambda}-\cos\frac{2\pi(x_i-x_j)}{\Lambda}\Big]\Big\}\,\delta q_j(t),
+\label{eq:h2}
+\end{equation}
+where $\delta q_j$ now is the change of the occupation of site $j$ per spin and $L_y$ the length per
+chain along $y$; for $i=j$ the argument of the logarithm is replaced by $(2\pi r_s/\Lambda)^2$ with
+$r_s=0.447b$, the mean distance within a square of side $b$. In ``one end in contact'' only the metal
+sites in the right half of the strip are coupled to the crystal.
+
+\subsection{Dielectric constant}
+\label{sec:eps}
+The Hartree term describes the dielectric response of the valence electrons in the random-phase
+approximation. We compute the static permittivity of the crystal from the independent-particle
+response matrix $\chi^0_{ij}=\partial n_i/\partial V_j$ of a slab without metal: the total potential
+in a uniform external field follows from $(1-K\chi^0)V=V^{\rm ext}$, where $K$ is the kernel of
+Eq.~\eqref{eq:h1} or \eqref{eq:h2}, and its slope in the middle of the slab gives $1/\varepsilon$. In
+two dimensions the geometric value $L_y=b$ yields $\varepsilon=3.75$; we use $L_y=1.019b$, which
+gives the high-frequency permittivity 3.70 of ZnO~\cite{ozgur2005}. The model thus reproduces the
+permittivity without adjustment. The chain contains only the states with the smallest gap and
+overestimates the polarizability: the geometric area $2b^2$ gives $\varepsilon=5.6$. We therefore use
+$A_c=1.70\times2b^2$, which gives $\varepsilon=3.70$. All sheet densities and energies per area of
+the chain model refer to this $A_c$.
+
+\section{Numerical method and observables}
+All orbitals below the Fermi level of the static Hamiltonian (obtained by exact diagonalization)
+are propagated with the second-order split-operator scheme
+$e^{-iV\Delta t/2}e^{-iT\Delta t}e^{-iV\Delta t/2}$. The diagonal part $V$ (on-site energies,
+$U^{\rm ext}$, and $U^{\rm H}$) is applied exactly; since it does not change the density, the
+Hartree potential evaluated after each hopping step is time centered. The hopping part $T$ is
+applied exactly by a precomputed dense propagator for the chain ($\Delta t=0.2$) and by a Taylor
+expansion of sixth order for the strip ($\Delta t=0.4$), where it depends on time through $A(t)$.
+The norm of every orbital is conserved to better than $10^{-6}$. An explicit fourth-order
+Runge--Kutta integration of the mean-field equations is unstable at these time steps.
+
+In the chain model the field $F(t)$ is the difference of $U^{\rm ext}+U^{\rm H}$ between the ninth
+and the second crystal layer beyond the interface layer divided by their distance (0.46 to 2.05~nm
+from the interface). $F_+$ and $F_-$ are its extrema of the two polarities, $F_{\rm dc}$ is its mean
+over the two central cycles, and $F_0$ is the largest $|F|$ of the insulated junction at the same
+$D_0$. The emitted field is proportional to $\ddot P$ with the dipole $P=\sum_i\delta q_iz_i$. In the
+strip model the emission polarized along the driver is proportional to $\dot J_x$ with the bond
+current $J_x=-\langle\partial H/\partial A\rangle$, and the local fields are averages of the gradient
+of $U^{\rm H}$ (plus $F_{\rm m}$ for the in-plane component) over four columns and the first four
+rows of the crystal, either just outside a strip edge or just below it.
+
+Because the pulses are short, the wings of the fundamental line mask weak low-order harmonics. For
+every configuration we therefore repeat the simulation at a low amplitude ($D_0=0.05$~V/nm for the
+chain, $F_{\rm m}=0.025$~V/nm for the strip), scale the result to the amplitude of interest, and
+subtract it. The spectrum is $S(\Omega)=|\int dt\,w(t)\,a_{\rm nl}(t)e^{i\Omega t}|^2$ with the
+nonlinear part $a_{\rm nl}$ of $\ddot P$ or $\dot J_x$ and a Hann window $w$; the yield $S_n$ is the
+integral of $S$ over $(n\pm\tfrac12)\omega$, and $S_1$ denotes the yield of the scaled linear
+response at the fundamental. The absorbed energy is $W=2\sum_k(n_k-n_k^0)E_k$ divided by $A_c$
+(chain) or $L_y$ (strip, per period), where $n_k$ are the occupations of the static eigenstates
+after the pulse.
+
+\section{Chain model: additional data}
+Table~\ref{tab:field} lists the data underlying Fig.~3(a) and 3(b) of the main text, and
+Fig.~\ref{figharm} shows the harmonic yields. The contact fills in the even orders below the gap
+and removes the deep minima between the odd orders; the second harmonic of the contacted junction
+depends only weakly on the field, as expected for a source that is limited by space charge.
+Tables~\ref{tab:phi} and \ref{tab:tc} contain the scans of the barrier height and of the contact
+hopping [Fig.~3(c) and 3(d)]. At $t_c=0.05$~eV the hopping is 30 times smaller than in the reference.
+For a rectangular barrier of height 3~eV the amplitude decays as $e^{-\kappa d}$ with
+$\kappa=8.9$~nm$^{-1}$, so this corresponds to an insulating layer of $d=0.4$~nm.
+
+\begin{table}[h]
+\caption{Field scan of the chain model for $\Phi_{\rm B}=0.7$~eV, $t_c=1.5$~eV, $\ell=8$~nm, wavelength
+2~$\mu$m, five-cycle pulse. The even-to-odd ratio is $(S_4+S_6)/(S_3+S_5)$.}
+\label{tab:field}
+\input{tab_tb_field.tex}
+\end{table}
+
+\begin{figure}[h]
+\includegraphics[width=0.95\textwidth]{figS_harm.pdf}
+\caption{Chain model. (a), (b) Harmonic yields of the contacted and the insulated junction at two
+driving fields, normalized to the linear yield at the fundamental; the shaded region marks photon
+energies above the gap. (c) Second- and fourth-harmonic yields versus field for the contacted
+(solid) and insulated (dashed) junction.}
+\label{figharm}
+\end{figure}
+
+\begin{table}[h]
+\caption{Barrier scan of the chain model at $D_0=5.5$~V/nm ($F_0=1.18$~V/nm). Midgap is at
+$\Phi_{\rm B}=1.65$~eV.}
+\label{tab:phi}
+\input{tab_tb_phi.tex}
+\end{table}
+
+\begin{table}[h]
+\caption{Scan of the contact hopping at $D_0=5.5$~V/nm.}
+\label{tab:tc}
+\input{tab_tb_tc.tex}
+\end{table}
+
+Table~\ref{tab:extra} shows convergence tests and additional runs at $D_0=5.5$~V/nm. Halving the time
+step, enlarging the crystal to 260 layers, or enlarging the metal to 140 layers changes the fields and
+the absorbed energy by less than 3\% and the harmonic yields by less than 15\%. The rectification
+depends only weakly on the decay length $\ell$ of the near field and on the wavelength. With eight
+instead of five cycles the quasistatic field increases from 0.24 to 0.31~V/nm, as expected for a
+charge that accumulates from cycle to cycle.
+
+\begin{table}[h]
+\caption{Convergence tests and additional runs of the chain model at $D_0=5.5$~V/nm. Note that $F$ is
+evaluated in a fixed window, so that the insulated peak field at given $D_0$ depends on $\ell$.}
+\label{tab:extra}
+\input{tab_tb_extra.tex}
+\end{table}
+
+\section{Strip model: additional data}
+\label{sec:2d}
+Table~\ref{tab:2d} lists the results of the two-dimensional simulations. In the insulated strip
+the in-plane field just outside the edge is 1.6 times and the normal field below the edge 1.2 times
+the applied field; these modest factors reflect the small, non-resonant strip. For the strip with
+one end in contact, the quasistatic in-plane field outside the contacted edge and outside the
+insulated edge have opposite signs ($+0.06$ and $-0.05$~V/nm at $F_{\rm m}=0.75$~V/nm), as expected
+for negative charge that sits below the contacted edge. SLABSENTENCE
+
+With both ends in contact the two edges of the short strip are not independent: electrons injected
+at one edge reach the other within the pulse, the absorbed energy more than doubles, and the third
+harmonic grows by an order of magnitude. For the five-cycle pulse the second harmonic of this
+mirror-symmetric structure is three times weaker than with one end in contact but does not vanish,
+because the two edges are not driven equivalently: the injection depends on the strongest
+half-cycles and on the charge already present. EIGHTSENTENCE
+
+\begin{table}[h]
+\caption{Strip model. $|F_x|^{\rm out}$: peak in-plane field outside the right edge; $F_{z,\pm}$ and
+$F_{z,{\rm dc}}$: extrema and mean over the two central cycles of the normal field below the right
+edge; $W$: absorbed energy per period and per unit length of the strip; $S_n$: yields of the in-plane
+emission. The reference geometry has a slab of 22 layers and a five-cycle pulse.}
+\label{tab:2d}
+\small\setlength{\tabcolsep}{4pt}
+\input{tab_tb_2d.tex}
+\end{table}
+
+\section{Independent check with a continuum model}
+\label{sec:cont}
+To test that the results do not depend on the tight-binding description we solved the same problem
+on a real-space grid for a generic crystal with a gap of 3.3~eV. This model contains the vacuum
+level, a continuum of metal states, and an explicit insulating layer.
+
+\subsection{Model}
+The coordinate $z$ runs along the field line that leaves the metal; the metal occupies $-L_m<z<0$
+and the crystal $d<z<d+L_c$, where $d$ is the thickness of an optional insulating spacer. Electrons
+obey
+\begin{equation}
+i\partial_t\psi_j=\Big[-\tfrac12\partial_z^2+V(z)+D(t)\,g(z)+U_{\rm H}(z,t)\Big]\psi_j ,
+\end{equation}
+with the static potential
 \begin{equation}
 V(z)=\begin{cases}
 V_m, & -L_m<z<0 \quad\text{(metal)},\\
@@ -24,89 +244,98 @@ E_c+h_s, & 0<z<d \quad\text{(spacer)},\\
 E_c+\chi, & \text{elsewhere (vacuum)},
 \end{cases}
 \end{equation}
-with all steps smoothed by $\tfrac12[1+\tanh(z/w)]$, $w=1.5$. The parameters are $a=8$ (0.423~nm),
-$V_0=0.32$, which gives band edges $E_v=-1.05$~eV and $E_c=2.28$~eV relative to the maxima of the
-crystal potential and a gap $E_g=3.34$~eV between the second and third bands; electron affinity
-$\chi=4$~eV; spacer barrier $h_s=3.1$~eV; and $V_m=E_{\rm F}-5.5$~eV, where the Fermi level
-$E_{\rm F}=E_c-\Phi_{\rm B}$ is set by the Schottky barrier. The reference geometry has
-$L_m=240$ (12.7~nm) and $L_c=80a$ (33.9~nm). Each spatial orbital below $E_{\rm F}$ is doubly
-occupied. The metal electron density is $2k_{\rm F}/(\pi a^2)=4.3\times10^{22}$~cm$^{-3}$
-and its plasma frequency is 7.7~eV.
+with all steps smoothed by $\tfrac12[1+\tanh(z/w)]$, $w=1.5$. The crystal is described by the
+Mathieu potential~\cite{wu2015} with $a=8$ (0.423~nm) and $V_0=0.32$, which gives band edges
+$E_v=-1.05$~eV and $E_c=2.28$~eV relative to the maxima of the crystal potential and a gap
+$E_g=3.34$~eV between the second and third bands. The electron affinity is $\chi=4$~eV, the spacer
+barrier $h_s=3.1$~eV, and $V_m=E_{\rm F}-5.5$~eV, where $E_{\rm F}=E_c-\Phi_{\rm B}$ with
+$\Phi_{\rm B}=0.7$~eV. The reference geometry has $L_m=240$ (12.7~nm) and $L_c=80a$ (33.9~nm). Each
+spatial orbital below $E_{\rm F}$ is doubly occupied. The metal electron density is
+$2k_{\rm F}/(\pi a^2)=4.3\times10^{22}$~cm$^{-3}$ and its plasma frequency 7.7~eV.
 
-The time-dependent part of the Hamiltonian is $D(t)g(z)+U_{\rm H}(z,t)$. The first term is the
-potential of an external charge sheet at the metal surface, which represents the oscillating
-surface charge of the antenna, with
+The external potential is $D(t)g(z)$ with
 \begin{equation}
 g(z)=\begin{cases}0,& z<0,\\ z/\varepsilon_s, & 0<z<d,\\ d/\varepsilon_s+\ell\,[1-e^{-(z-d)/\ell}], & z>d,\end{cases}
 \end{equation}
-where $\ell$ models the decay of the near field into the crystal and $\varepsilon_s=3.9$ is the
-permittivity of the (passive) spacer. The driving waveform is
-$D(t)=D_0\sin^2(\pi t/\tau)\cos[\omega(t-\tau/2)]$ for $0<t<\tau$. The induced Hartree potential
-obeys the planar Poisson equation
+where $\varepsilon_s=3.9$ is the permittivity of the (passive) spacer and $\ell=8$~nm. The wavelength
+is 2.1~$\mu$m and the pulse has five cycles. The Hartree potential obeys
 \begin{equation}
 \partial_z^2U_{\rm H}(z,t)=-4\pi\,\frac{2}{a^2}\Big[\sum_j|\psi_j(z,t)|^2-\sum_j|\psi_j(z,0)|^2\Big],
 \end{equation}
-with vanishing field far to the left; because the induced charge integrates to zero the field also
-vanishes far to the right. The static potential plays the role of a frozen ground-state Kohn--Sham
-potential, so the treatment corresponds to the time-dependent Hartree (random-phase) approximation
-for the induced field; exchange-correlation and image-potential effects are not included.
+with vanishing field far to the left. The effective permittivity of this crystal is
+$D_0/F_0\simeq5.6$. The insulated reference has a spacer of $d=1.5$~nm.
 
-\section{Numerical method and observables}
-The orbitals are represented on a uniform grid ($\Delta z=0.3125$, $N=3072$ points in the reference
-geometry) with periodic boundary conditions and vacuum margins that prevent overlap across the
-boundary. The initial states are obtained by exact diagonalization of the static Hamiltonian with
-the Fourier representation of the kinetic energy. They are propagated with the second-order
-split-operator method, $\Delta t=0.1$. Since the potential step does not change the density, the
-Hartree potential evaluated after each kinetic step is time centered. The Poisson equation is
-integrated with a staggered discretization (field at half-integer grid points), which makes the
-discrete Coulomb kernel symmetric; a non-symmetric discretization renders the plasma oscillation
-of the metal weakly unstable.
+The orbitals are represented on a uniform grid ($\Delta z=0.3125$, 3072 points) with periodic
+boundary conditions and vacuum margins. The initial states are obtained by exact diagonalization with
+the Fourier representation of the kinetic energy and are propagated with the split-operator method,
+$\Delta t=0.1$. The Poisson equation is integrated with a staggered discretization (field at
+half-integer grid points), which makes the discrete Coulomb kernel symmetric; a non-symmetric
+discretization renders the plasma oscillation of the metal weakly unstable. The field $F(t)$ is
+averaged over 0.4 to 2.1~nm from the interface, the emission is obtained from the total current
+$J=\sum_j\langle\psi_j|p|\psi_j\rangle$ without subtraction of the linear response, and the absorbed
+energy is $W=2\sum_k(n_k-n_k^0)E_k/a^2$.
 
-The internal field $F(t)$ is the difference of $D(t)g+U_{\rm H}$ between the end of the fifth and the
-end of the first unit cell of the crystal divided by their distance, i.e., the field averaged over
-0.4 to 2.1~nm from the interface. $F_+$ and $F_-$ are its extrema of the two polarities, and
-$F_{\rm dc}$ is its mean over the two central cycles of the pulse. $F_0$ is the peak of $F$ for the
-insulated junction ($d=1.5$~nm) at the same $D_0$. The emission spectrum is
-$S(\Omega)=|\int dt\,w(t)\dot J(t)e^{i\Omega t}|^2$ with $J=\sum_j\langle\psi_j|p|\psi_j\rangle$ and a
-Hann window; harmonic yields $S_n$ are integrals of $S$ over $(n\pm\tfrac12)\omega$. The even-to-odd ratio is $(S_4+S_6)/(S_3+S_5)$. The absorbed energy
-is $W=2\sum_k(n_k-n_k^0)E_k/a^2$, where $n_k$ are the occupations of the static eigenstates after
-the pulse. The sheet densities quoted in the main text follow from Gauss's law with the effective
-permittivity $\varepsilon=D_0/F_0$.
+\subsection{Results}
+Figures~\ref{figc1} to \ref{figc3} and Tables~\ref{tab:cfield} to \ref{tab:cextra} show the results.
+All phenomena of the tight-binding model are reproduced: the forward half-cycle is reduced and the
+reverse one enhanced, a quasistatic field of 12\% to 29\% of $F_0$ appears, even harmonics become as
+strong as odd ones, the highest odd harmonics are reduced, the absorbed energy rises by up to two
+orders of magnitude, and the quasistatic field changes sign at midgap. The reduction of the forward
+half-cycle is stronger than for the gold--ZnO parameters (to 51\%--75\% of $F_0$ between 0.4 and
+1.85~V/nm), which we attribute to the larger transparency of the contact and the larger permittivity
+in this model; the sheet densities reach $10^{13}$~cm$^{-2}$. An insulating layer of 0.25~nm reduces
+the absorbed energy by a factor of 3.6; at 0.5~nm rectification and even harmonics are gone, and from
+0.75~nm on the response is that of the crystal without any metal [Fig.~\ref{figc3}(d)].
 
-\section{Field dependence}
-Table~\ref{tab:field} lists the data underlying Fig.~3(a) and 3(b) of the main text.
+\begin{figure}[h]
+\includegraphics[width=0.95\textwidth]{figS1.pdf}
+\caption{Continuum model at $F_0=1.0$~V/nm. (a) Geometry. (b) Field inside the crystal for the
+contacted (solid) and insulated (dashed) junction. (c) Induced electron charge in the crystal beyond
+the first two unit cells in excess of the insulated case. (d) Cell-averaged induced electron density
+in excess of the insulated case at a forward and the following reverse field extremum.}
+\label{figc1}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=0.5\textwidth]{figS2.pdf}
+\caption{Continuum model. Harmonic yields of the contacted (circles) and insulated (squares) junction
+for (a) $F_0=1.0$~V/nm and (b) $F_0=1.4$~V/nm, normalized to the fundamental of the insulated case.
+The shaded region marks photon energies above the gap.}
+\label{figc2}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=0.95\textwidth]{figS3.pdf}
+\caption{Continuum model. (a) Absorbed energy versus driving field for the contacted and insulated
+junction, and for the contacted junction without the space-charge field. (b) Peak fields of the two
+half-cycles and quasistatic component; the dotted line is the insulated case. (c) Quasistatic field
+(left axis) and even-to-odd yield ratio (right axis) versus Schottky barrier at $F_0=1.0$~V/nm.
+(d) Absorbed energy and fourth-harmonic yield versus the thickness $d$ of an insulating spacer,
+relative to the contacted junction.}
+\label{figc3}
+\end{figure}
+
 \begin{table}[h]
-\caption{Field scan for $\Phi_{\rm B}=0.7$~eV, $\ell=8$~nm, wavelength 2.1~$\mu$m, five-cycle pulse.}
-\label{tab:field}
+\caption{Continuum model: field scan for $\Phi_{\rm B}=0.7$~eV, $\ell=8$~nm, wavelength 2.1~$\mu$m,
+five-cycle pulse.}
+\label{tab:cfield}
 \input{tab_field.tex}
 \end{table}
 
-\section{Convergence}
-Table~\ref{tab:conv} shows the dependence of the main observables on the numerical parameters and on
-the size of the system for the contacted junction at $D_0=5.7$~V/nm ($F_0=1.0$~V/nm).
 \begin{table}[h]
-\caption{Convergence tests for the contacted junction at $F_0=1.0$~V/nm. $S_n$ is the yield of the
-$n$th harmonic.}
-\label{tab:conv}
+\caption{Continuum model: convergence tests for the contacted junction at $F_0=1.0$~V/nm.}
+\label{tab:cconv}
 \input{tab_conv.tex}
 \end{table}
 
-\section{Near-field decay length, wavelength, and pulse duration}
-Table~\ref{tab:extra} collects additional runs at $D_0=5.7$~V/nm. The crystal without any metal
-behaves like the insulated junction. For the contacted junction the rectification
-($F_-$, $F_+$, $F_{\rm dc}$) depends only weakly on the decay length $\ell$ of the near field and on
-the driving wavelength, and the even-to-odd ratio stays of order unity (0.55 to 1.6), compared with
-0.03 to 0.09 without the contact. The quasistatic field and the even-to-odd ratio increase with the
-number of cycles, as expected for a charge that accumulates from cycle to cycle. Note that $F$ is
-averaged over a fixed window, so that for $\ell=4$~nm the insulated peak value is lower at the same
-$D_0$.
 \begin{table}[h]
-\caption{Additional runs at $D_0=5.7$~V/nm.}
-\label{tab:extra}
+\caption{Continuum model: additional runs at $D_0=5.7$~V/nm.}
+\label{tab:cextra}
 \input{tab_extra.tex}
 \end{table}
 
 \section{Far-field parity of the contact emission}
+\label{sec:parity}
 Consider an antenna with mirror symmetry $x\to-x$ driven at its dipolar resonance. Let $\hat n_{\rm R}$
 and $\hat n_{\rm L}=-\hat n_{\rm R}$ be the outward in-plane normals of the two ends. The in-plane near
 field has the same sign at both ends, so the field component along the outward normal obeys
@@ -117,5 +346,9 @@ $J_{x,{\rm R}}=j(t)$ and $J_{x,{\rm L}}=-j(t+T/2)$. The $n$th Fourier component 
 proportional to $1-e^{-in\pi}=1-(-1)^n$, so even harmonics cancel in the direction normal to the
 surface and odd harmonics add. This holds for any source that depends only on the local field
 relative to the outward normal, including the field-gradient mechanism. Even harmonics survive off
-axis, in odd diffraction orders of an array, and for antennas without mirror symmetry.
+axis, in odd diffraction orders of an array, and for antennas without mirror symmetry. The argument
+assumes a periodic driver and independent ends; for few-cycle pulses the cancellation is incomplete
+(see the additional data of the strip model above).
+
+\bibliography{refs}
 \end{document}

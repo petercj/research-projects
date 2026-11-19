@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{33}%
+\begin{thebibliography}{32}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -277,33 +277,38 @@
   {https://doi.org/10.1364/CLEO_FS.2023.FTh3M.5} {\emph {\bibinfo {booktitle}
   {CLEO 2023}}}\ (\bibinfo  {publisher} {Optica Publishing Group},\ \bibinfo
   {year} {2023})\ p.\ \bibinfo {pages} {FTh3M.5}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Wu}\ \emph {et~al.}(2015)\citenamefont {Wu},
-  \citenamefont {Ghimire}, \citenamefont {Reis}, \citenamefont {Schafer},\ and\
-  \citenamefont {Gaarde}}]{wu2015}%
+\bibitem [{\citenamefont {{\"O}zg{\"u}r}\ \emph {et~al.}(2005)\citenamefont
+  {{\"O}zg{\"u}r}, \citenamefont {Alivov}, \citenamefont {Liu}, \citenamefont
+  {Teke}, \citenamefont {Reshchikov}, \citenamefont {Do{\u g}an}, \citenamefont
+  {Avrutin}, \citenamefont {Cho},\ and\ \citenamefont {Morko{\c
+  c}}}]{ozgur2005}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Wu}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Ghimire}},
-  \bibinfo {author} {\bibfnamefont {D.~A.}\ \bibnamefont {Reis}}, \bibinfo
-  {author} {\bibfnamefont {K.~J.}\ \bibnamefont {Schafer}},\ and\ \bibinfo
-  {author} {\bibfnamefont {M.~B.}\ \bibnamefont {Gaarde}},\ }\href
-  {https://doi.org/10.1103/PhysRevA.91.043839} {\bibfield  {journal} {\bibinfo
-  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {91}},\ \bibinfo
-  {pages} {043839} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {{\"U}.}~\bibnamefont
+  {{\"O}zg{\"u}r}}, \bibinfo {author} {\bibfnamefont {Y.~I.}\ \bibnamefont
+  {Alivov}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Liu}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Teke}}, \bibinfo {author}
+  {\bibfnamefont {M.~A.}\ \bibnamefont {Reshchikov}}, \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Do{\u g}an}}, \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Avrutin}}, \bibinfo {author} {\bibfnamefont
+  {S.-J.}\ \bibnamefont {Cho}},\ and\ \bibinfo {author} {\bibfnamefont
+  {H.}~\bibnamefont {Morko{\c c}}},\ }\href {https://doi.org/10.1063/1.1992666}
+  {\bibfield  {journal} {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf
+  {\bibinfo {volume} {98}},\ \bibinfo {pages} {041301} (\bibinfo {year}
+  {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Brillson}\ and\ \citenamefont
+  {Lu}(2011)}]{brillson2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~J.}\ \bibnamefont
+  {Brillson}}\ and\ \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Lu}},\
+  }\href {https://doi.org/10.1063/1.3581173} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {109}},\ \bibinfo
+  {pages} {121301} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
 \bibitem [{SM()}]{SM}%
   \BibitemOpen
   \href@noop {} {}\bibinfo {note} {See Supplemental Material at [URL will be
   inserted by publisher] for details of the model and numerics, convergence
   tests, tabulated data, additional runs, and the far-field parity
   rule.}\BibitemShut {Stop}%
-\bibitem [{\citenamefont {Yu}\ \emph {et~al.}(2019)\citenamefont {Yu},
-  \citenamefont {Hansen},\ and\ \citenamefont {Madsen}}]{yu2019}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Yu}}, \bibinfo {author} {\bibfnamefont {K.~K.}\ \bibnamefont {Hansen}},\
-  and\ \bibinfo {author} {\bibfnamefont {L.~B.}\ \bibnamefont {Madsen}},\
-  }\href {https://doi.org/10.1103/PhysRevA.99.013435} {\bibfield  {journal}
-  {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {99}},\
-  \bibinfo {pages} {013435} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Vampa}\ \emph {et~al.}(2018)\citenamefont {Vampa}
   \emph {et~al.}}]{vampa2018}%
   \BibitemOpen
@@ -335,14 +340,6 @@
   {https://doi.org/10.1515/nanoph-2024-0610} {\bibfield  {journal} {\bibinfo
   {journal} {Nanophotonics}\ }\textbf {\bibinfo {volume} {14}},\ \bibinfo
   {pages} {853} (\bibinfo {year} {2025})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Sun}\ \emph {et~al.}(2023)\citenamefont {Sun} \emph
-  {et~al.}}]{sun2023}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
-  {Sun}} \emph {et~al.},\ }\href {https://doi.org/10.1038/s41377-023-01262-8}
-  {\bibfield  {journal} {\bibinfo  {journal} {Light Sci. Appl.}\ }\textbf
-  {\bibinfo {volume} {12}},\ \bibinfo {pages} {237} (\bibinfo {year}
-  {2023})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Schiffrin}\ \emph {et~al.}(2013)\citenamefont
   {Schiffrin} \emph {et~al.}}]{schiffrin2013}%
   \BibitemOpen

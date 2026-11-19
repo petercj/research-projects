@@ -97,7 +97,7 @@ def fig1():
     axd.set_xlim(-1.0, 10); axd.set_ylim(-14, 34); axd.set_xlabel(r"$z$ (nm)")
     axd.set_ylabel(r"$\Delta(\delta n)$ ($10^{-3}$ nm$^{-3}$)")
     axd.legend(frameon=False, loc="upper right"); axd.text(0.9, 0.06, "(d)", transform=axd.transAxes)
-    fig.savefig(os.path.join(FIG, "fig1.pdf")); plt.close(fig)
+    fig.savefig(os.path.join(FIG, "figS1.pdf")); plt.close(fig)
 
 # ------------------------------------------------------------------ Fig. 2
 def fig2():
@@ -120,7 +120,7 @@ def fig2():
     axs[0].legend(frameon=False, loc="lower left", ncol=2, handlelength=1.8, columnspacing=1.2, borderaxespad=0.2)
     axs[1].text(0.97, 0.07, r"$n\hbar\omega>E_g$", fontsize=7, transform=axs[1].transAxes, ha="right")
     axs[1].set_xlabel("harmonic order $n$")
-    fig.savefig(os.path.join(FIG, "fig2.pdf")); plt.close(fig)
+    fig.savefig(os.path.join(FIG, "figS2.pdf")); plt.close(fig)
 
 # ------------------------------------------------------------------ Fig. 3
 KA = 2 / 64.0 / (0.0529177 ** 2)        # eV per chain and spin -> eV per nm^2 of contact
@@ -185,7 +185,7 @@ def fig3():
     ax.set_xlabel(r"spacer $d$ (nm)"); ax.set_ylabel("relative to contact"); ax.set_ylim(3e-3, 3)
     ax.legend(frameon=False, fontsize=6.5, loc="upper right", labelspacing=0.25, handlelength=1.5)
     ax.text(0.05, 0.07, "(d)", transform=ax.transAxes)
-    fig.savefig(os.path.join(FIG, "fig3.pdf")); plt.close(fig)
+    fig.savefig(os.path.join(FIG, "figS3.pdf")); plt.close(fig)
 
 if __name__ == "__main__":
     os.makedirs(FIG, exist_ok=True)
