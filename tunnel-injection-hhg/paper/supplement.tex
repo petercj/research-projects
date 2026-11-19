@@ -83,8 +83,10 @@ chain.
 \subsection{Strip geometry}
 The two-dimensional system is periodic along $x$ with period $\Lambda=N_xb$ and contains a crystal
 slab of $N_z$ layers and a metal strip of $W_m\times H_m$ sites on top of it. The reference geometry
-has $N_x=64$, $N_z=22$, $W_m=32$, and $H_m=4$ (period 14.6~nm, slab 5.0~nm, strip
-7.3~nm $\times$ 0.9~nm; 2240 orbitals). The system is uniform along $y$ and only states with
+has $N_x=64$, $N_z=22$, $W_m=33$, and $H_m=4$ (period 14.6~nm, slab 5.0~nm, strip
+7.5~nm $\times$ 0.9~nm; 2244 orbitals). With an odd number of metal columns the structure has
+a mirror plane through a column of sites; with an even number one edge of the strip lies above a
+cation and the other above an anion. The system is uniform along $y$ and only states with
 $k_y=0$ are included. The uniform driving field $F_{\rm m}(t)$, with the same time dependence as
 $D(t)$, enters through the Peierls phases of Eq.~(1) of the main text with
 $A(t)=\int_0^tF_{\rm m}(t')dt'$, and $U^{\rm ext}=0$. The Hartree potential is that of periodic
@@ -147,7 +149,9 @@ after the pulse.
 Table~\ref{tab:field} lists the data underlying Fig.~3(a) and 3(b) of the main text, and
 Fig.~\ref{figharm} shows the harmonic yields. The contact fills in the even orders below the gap
 and removes the deep minima between the odd orders; the second harmonic of the contacted junction
-depends only weakly on the field, as expected for a source that is limited by space charge.
+depends only weakly on the field, as expected for a source that is limited by space charge. The
+ratio of second to third harmonic therefore falls from 20 at $F_0=0.34$~V/nm to 0.02 at
+1.9~V/nm.
 Tables~\ref{tab:phi} and \ref{tab:tc} contain the scans of the barrier height and of the contact
 hopping [Fig.~3(c) and 3(d)]. At $t_c=0.05$~eV the hopping is 30 times smaller than in the reference.
 For a rectangular barrier of height 3~eV the amplitude decays as $e^{-\kappa d}$ with
@@ -199,40 +203,60 @@ evaluated in a fixed window, so that the insulated peak field at given $D_0$ dep
 \section{Strip model: additional data}
 \label{sec:2d}
 Table~\ref{tab:2d} lists the results of the two-dimensional simulations. In the insulated strip
-the in-plane field just outside the edge is 1.6 times and the normal field below the edge 1.2 times
+the in-plane field just outside the edge is 1.7 times and the normal field below the edge 1.2 times
 the applied field; these modest factors reflect the small, non-resonant strip. For the strip with
-one end in contact, the quasistatic in-plane field outside the contacted edge and outside the
-insulated edge have opposite signs ($+0.06$ and $-0.05$~V/nm at $F_{\rm m}=0.75$~V/nm), as expected
-for negative charge that sits below the contacted edge. With a slab of 32 instead of 22 layers the fields, the absorbed energy, and the transferred
-charge change by less than 2\%, and the low-order harmonic yields by up to a factor of 1.7; the
-second harmonic with one end in contact then exceeds that of the insulated strip by a factor of 57
-instead of 90.
-
-With both ends in contact the two edges of the short strip are not independent: electrons injected
-at one edge reach the other within the pulse, the absorbed energy more than doubles, and the third
-harmonic grows by an order of magnitude. For the five-cycle pulse the second harmonic of this
-mirror-symmetric structure is three times weaker than with one end in contact but does not vanish,
-because the two edges are not driven equivalently: the injection depends on the strongest
-half-cycles and on the charge already present. With an eight-cycle pulse the second harmonic of the symmetric strip is 1.3 times weaker than with
-one end in contact, so the cancellation does not improve with the pulse duration in this geometry.
-The cycle-averaged charges below the two edges differ by 10\% to 25\% during the pulse, and charge
-injected at one edge reaches the other half of the period within a few cycles. The two ends of
-this short strip are therefore not independent, and the model contains no relaxation that would
-establish a periodic state. A test of the parity rule for realistic antenna lengths and pulse
-durations is beyond the present simulations. With one end in contact, the quasistatic normal field
-grows from 0.09 to 0.15~V/nm and the absorbed energy by 40\% when the pulse is lengthened from five
-to eight cycles.
+one end in contact, the quasistatic in-plane fields outside the contacted and outside the
+insulated edge have opposite signs ($+0.08$ and $-0.06$~V/nm at $F_{\rm m}=0.75$~V/nm), as expected
+for negative charge below the contacted edge. Its second harmonic exceeds that of the
+insulated strip by a factor of 130. For a strip with 32 columns the factor is 90 (800 at
+$F_{\rm m}=0.5$~V/nm), and 57 when the slab has 32 instead of 22 layers, while the fields, the
+absorbed energy, and the transferred charge change by less than 2\%. The third harmonic depends on
+the contact configuration: relative to the insulated strip it is eight times weaker with one end in
+contact and four times stronger with both. With both ends in contact the absorbed energy is twice
+that for one end.
 
 \begin{table}[h]
 \caption{Strip model. $|F_x|^{\rm out}$: peak in-plane field outside the right edge; $F_{z,\pm}$ and
 $F_{z,{\rm dc}}$: extrema and mean over the two central cycles of the normal field below the right
 edge; $W$: absorbed energy per period and per unit length of the strip; $S_n$: yields of the in-plane
-emission. The reference geometry has a slab of 22 layers and a five-cycle pulse. $S_1$ is the linear yield of
-the insulated strip (of the strip with one end in contact for the eight-cycle runs).}
+emission, normalized to the linear yield $S_1$ of the insulated strip (of the strip with one end in
+contact where no insulated run exists). Unless noted the slab has 22 layers and the pulse five
+cycles. ``Wedge'': the right end of the strip is beveled at 45$^\circ$ with its tip on the
+crystal.}
 \label{tab:2d}
 \footnotesize\setlength{\tabcolsep}{3.5pt}
 \input{tab_tb_2d.tex}
 \end{table}
+
+\subsection{Mirror symmetry and the second harmonic}
+For a mirror-symmetric structure the in-plane current obeys $J_x[-F](t)=-J_x[F](t)$ for any pulse:
+it is an odd functional of the field. For a periodic driver it then contains odd harmonics only.
+For a short pulse a remainder at even orders is possible, because slowly varying quantities that
+are odd in the field, such as the difference between the charges injected at the two ends,
+multiply the second-order response. We test the cancellation in two ways (Table~\ref{tab:sym}).
+First, the strip with 33 columns and both ends in contact is mirror symmetric. Second, a strip with
+one end in contact, driven by $F(t)$, has the current $J[F]$, and its mirror image driven by the same
+field has the current $-J[-F]$. Two such strips that do not interact therefore carry the current
+$J[F]-J[-F]$, which we obtain from two simulations with opposite sign of the field. This represents
+a symmetric antenna with independent ends.
+
+For the five-cycle pulse the second harmonic of the two independent ends is 33 (46) times weaker
+than that of the single end driven with $+F_{\rm m}$ ($-F_{\rm m}$) and four times that of the
+insulated strip, while the odd orders are those of the single end. For the symmetric strip the
+second harmonic is 12 to 16 times weaker than for one contacted end. Its ends are not independent:
+charge injected at one end reaches the other half of the period within a few cycles. EIGHTSM
+WEDGESM
+
+\begin{table}[h]
+\caption{Harmonic yields of the in-plane emission of the strip with 33 columns at
+$F_{\rm m}=0.75$~V/nm, normalized to the linear yield of the insulated strip. ``Two independent
+ends'' is the mirror-symmetric combination $J[F]-J[-F]$ of the two runs with one end in contact,
+normalized to the linear yield of two strips.}
+\label{tab:sym}
+\input{tab_tb_sym.tex}
+\end{table}
+
+\input{sm_zno.tex}
 
 \section{Independent check with a continuum model}
 \label{sec:cont}
@@ -359,8 +383,8 @@ proportional to $1-e^{-in\pi}=1-(-1)^n$, so even harmonics cancel in the directi
 surface and odd harmonics add. This holds for any source that depends only on the local field
 relative to the outward normal, including the field-gradient mechanism. Even harmonics survive off
 axis, in odd diffraction orders of an array, and for antennas without mirror symmetry. The argument
-assumes a periodic driver and independent ends; for few-cycle pulses the cancellation is incomplete
-(see the additional data of the strip model above).
+assumes a periodic driver; the remainder for few-cycle pulses is quantified in the section on the
+strip model.
 
 \bibliography{refs}
 \end{document}

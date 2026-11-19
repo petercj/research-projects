@@ -1,0 +1,96 @@
+\section{Comparison with gold antennas on ZnO}
+\label{sec:zno}
+Imasaka \textit{et al.}~\cite{imasaka2018} measured harmonics and band-gap fluorescence from gold
+bars (length 570~nm, width 310~nm, thickness 100~nm) on $a$-cut ZnO driven by 100-fs pulses at
+2~$\mu$m, incident from the substrate side and polarized along the bars, at intensities between
+0.012 and 0.1~TW/cm$^2$~\cite{imasaka2019,ashihara2020}. Their simulation gives an enhancement of
+the in-plane field of about 9 (intensity 80) at the hot spots, 2~nm below the surface. With the
+bars along the $m$ axis only odd harmonics appear; along the polar $c$ axis even harmonics appear as
+in the bare crystal. We compare with the intensity dependence of the fifth, seventh, and ninth
+harmonics and of the fluorescence, which was reported for the $c$ orientation. From the published
+double-logarithmic plot (Fig.~8 of Ref.~\cite{ashihara2020}) we read power-law exponents of
+3.4, 3.2, 3.0, and 2.7, respectively, with an uncertainty of about 0.3; the multiphoton laws would
+give 5, 7, and 9 for the harmonics.
+
+\subsection{Near field of the bar}
+Near the contact edge the field is quasi-static. We solve
+$\nabla\cdot(\varepsilon\nabla\phi)=0$ by finite differences on a graded grid (smallest spacing
+0.25~nm) in the cross-section along the bar axis, for a perfectly conducting bar of length 570~nm
+and height 100~nm on a half-space with $\varepsilon=3.7$ in a uniform field along the bar.
+Figure~\ref{figzno}(a) shows the result. The field is singular at the contact line; averaged over
+depths of 0.5 to 2~nm, it decays to one half of its value at the edge within 5~nm on either side,
+and below the edge it decays with depth approximately as $z^{-1/2}$. The calculation does not
+contain the antenna resonance. We therefore use it for the shape of the near field only and fix
+the magnitude by a single number, the enhancement $\eta$ of the peak of $|E_x|$ at 2~nm depth
+relative to the incident amplitude inside the substrate, $0.60$~V/nm at 0.1~TW/cm$^2$.
+
+\subsection{Chain model with the computed depth profile}
+We repeated the field scan of the chain model with the depth dependence of the field below the edge
+(1~nm inside the contact) in place of the exponential with $\ell=8$~nm. Table~\ref{tab:prof} shows
+that the rectification is somewhat stronger than for the exponential profile: at $F_0=1.1$~V/nm the
+forward half-cycle is reduced by 24\%, the reverse one enhanced by 40\%, and
+$F_{\rm dc}=0.28F_0$. The table also lists the density of holes left in the crystal after the
+pulse, obtained from the depletion of the initially occupied eigenstates weighted with their
+probability beyond the second crystal layer. We use it as a proxy for the band-gap fluorescence,
+which requires holes in the $n$-type crystal. The contact raises the hole density at fields below 2~V/nm.
+
+\begin{table}[h]
+\caption{Chain model with the depth profile of the near field below the edge of the bar. Other
+parameters as in Table~\ref{tab:field}.}
+\label{tab:prof}
+\input{tab_tb_prof.tex}
+\end{table}
+
+\subsection{Hot-spot average}
+The response per unit length of the edge is
+\begin{equation}
+X(I)=\int_{\rm metal}X_{\rm c}\big(|F_z(s)|\big)\,ds+\int_{\rm free}X_{\rm i}\big(|{\bf F}(s)|\big)\,ds ,
+\end{equation}
+where $s$ is the distance from the contact edge, $F_z$ and ${\bf F}$ are the fields of
+Fig.~\ref{figzno}(a) averaged over depths of 0.5 to 2~nm and scaled with $\eta$ and the incident
+amplitude, and $X_{\rm c}$ and $X_{\rm i}$ are the results of the contacted and the insulated chain
+(harmonic yield, hole density, or absorbed energy per area), interpolated in the local field. The
+integrals extend to the middle of the bar and 150~nm beyond its end. For a hypothetical insulated
+antenna $X_{\rm c}$ is replaced by $X_{\rm i}$. Adding yields rather than amplitudes neglects the
+phases of the harmonics, and the five-cycle pulse of the simulation is shorter than that of the
+experiment; both affect magnitudes more than exponents.
+
+Figure~\ref{figzno}(b) and Table~\ref{tab:zno} show the exponents over the measured range of
+intensities as a function of $\eta$. They decrease with $\eta$ because a larger part of the hot spot
+saturates. For $\eta=3$ to 4 the model reproduces the four measured exponents to within 0.5, except
+for the ninth harmonic at $\eta=3$ and the seventh at $\eta=4$ (0.7 to 1.1). The harmonics do not
+distinguish between contacted and insulated antennas. The fluorescence does: with the contact its
+exponent is 2.7 to 2.9, as measured, and without it 3.3 to 4.0. For the simulated peak enhancement
+$\eta=9$~\cite{imasaka2019} all exponents are near 2, below the measured ones, with or without the
+contact; the peak field would then reach 5~V/nm at 0.1~TW/cm$^2$, where the model predicts an absorbed
+energy of the order of 100~eV/nm$^2$ at the edge. We conclude that the measured intensity dependence is consistent with
+the model for an effective enhancement of 3 to 4, and that within this description the fluorescence
+exponent requires the contact. The effective enhancement is the one adjusted parameter.
+
+Figure~\ref{figzno}(c) shows where the contact matters. For $\eta=4$ it raises the absorbed energy
+by a factor of 27 and the second harmonic of a single end by 35 at 0.012~TW/cm$^2$; both factors
+fall below 5 at 0.1~TW/cm$^2$, and they exceed 100 below 0.004~TW/cm$^2$. For $\eta=9$ the same
+factors are reached at intensities five times lower. The contact thus dominates at the low end of
+the intensities at which antenna-enhanced harmonics are detected and is masked by interband
+excitation at the high end.
+
+\begin{figure}[h]
+\includegraphics[width=0.98\textwidth]{figS_zno.pdf}
+\caption{(a) Quasi-static near field of a gold bar (570~nm $\times$ 100~nm) on ZnO around the
+contact edge, averaged over depths of 0.5 to 2~nm and normalized to the peak of $|E_x|$ at 2~nm
+depth. (b) Exponents of the intensity dependence of the hot-spot-averaged fluorescence proxy and
+seventh harmonic between 0.012 and 0.1~TW/cm$^2$ versus the peak field enhancement, with
+(circles) and without (squares) the contact; the bands mark the measured
+values~\cite{ashihara2020}. (c) Ratio of the hot-spot-averaged absorbed energy and second-harmonic
+yield with and without the contact for an enhancement of 4 (solid) and 9 (dashed); the shaded region
+is the measured range.}
+\label{figzno}
+\end{figure}
+
+\begin{table}[h]
+\caption{Exponents of the intensity dependence between 0.012 and 0.1~TW/cm$^2$ for the contacted
+antenna (in parentheses: insulated antenna) compared with the measured
+ones~\cite{imasaka2018,ashihara2020}. The fluorescence is represented by the hole density.}
+\label{tab:zno}
+\input{tab_zno.tex}
+\end{table}

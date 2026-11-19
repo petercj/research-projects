@@ -25,9 +25,9 @@ Metallic nanoantennas that enhance high-harmonic generation in solids are modele
 field concentrators. We show that this picture fails where the metal touches the crystal.
 Simulations of a gold--ZnO contact with the self-consistent space-charge field show that
 electrons tunnel through the Schottky barrier during one half-cycle only. The injected charge
-biases the near field by up to 20\% of its amplitude, raises the deposited energy by orders of
-magnitude, and makes even harmonics as strong as odd ones. At an antenna edge the rectified
-current radiates a strong second harmonic.
+biases the near field by up to 30\%, multiplies the deposited energy, and
+radiates a second harmonic that cancels for mirror-symmetric antennas. The model reproduces
+the intensity scaling of the fluorescence of gold antennas on ZnO.
 \end{abstract}
 
 \maketitle
@@ -48,11 +48,9 @@ the antenna, that is, at a metal--semiconductor contact. There the metal Fermi l
 the gap, and an electron needs to cross only the Schottky barrier $\PhiB$, typically below
 1~eV~\cite{tersoff1984}, rather than the gap $\Eg$. Since tunneling rates depend
 exponentially on the barrier height~\cite{fowler1928,keldysh1965}, a contact should emit
-carriers at fields far below the onset of interband tunneling. Optical-field-driven tunneling from metal nanostructures into vacuum or across
-nanogaps is well documented~\cite{kruger2011,rybka2016,putnam2017},
-charge transfer across metal--semiconductor interfaces occurs within hundreds of
-attoseconds~\cite{heide2020}, and field-driven currents from gold nanoantennas into silicon were recently
-measured~\cite{li2023}. In the HHG
+carriers at fields far below the onset of interband tunneling. Optical-field-driven tunneling from metal nanostructures is well
+documented~\cite{kruger2011,rybka2016,putnam2017}, also into
+semiconductors~\cite{heide2020,li2023}. In the HHG
 context, Imasaka \textit{et al.} observed band-gap fluorescence with an anomalously weak intensity
 dependence from ZnO under gold antennas and conjectured carrier transfer from the
 metal~\cite{imasaka2018}. Whether, and how, such injection alters harmonic generation has
@@ -64,18 +62,15 @@ not been examined.
 inside the crystal for the contacted (solid) and insulated (dashed) gold--ZnO junction at
 $\Fz=1.2$~V/nm. (c) Electron sheet density in the crystal beyond the first two atomic layers
 in excess of the insulated case. (d) Layer-averaged induced electron density in excess of the
-insulated case at a forward ($t=2T$) and the following reverse ($t=2.5T$) field extremum; the
-feature at $z\approx0$ (off scale) is the charge exchanged with the interface layer.}
+insulated case at a forward ($t=2T$) and the following reverse ($t=2.5T$) field extremum.}
 \label{fig1}
 \end{figure*}
 
-In this Letter we show that it does. The contact behaves as a tunnel diode loaded by the
-capacitance of the crystal: charge injected during one half-cycle stays in the crystal and its
-field biases the following half-cycles. The near field thereby loses its half-wave symmetry,
-with consequences for the harmonic spectrum and for the energy deposited in the hot spot. We
-establish this for parameters of
-gold on ZnO~\cite{imasaka2018}, first along the field line that leaves the contact and then
-for a two-dimensional antenna edge.
+In this Letter we show that it does. The contact acts as a tunnel diode loaded by the
+capacitance of the crystal: charge injected during one half-cycle stays in the crystal and
+biases the following ones, so that the near field loses its half-wave symmetry. We establish
+this for gold on ZnO, first along the field line that leaves the contact, then for a
+two-dimensional antenna edge, and compare with experiment.
 
 \textit{Model.}---The junction is described by the tight-binding Hamiltonian (atomic units; $U^{\rm ext}$, $U^{\rm H}$, and $A$ depend on time)
 \begin{equation}
@@ -133,13 +128,14 @@ in agreement with the charge counted directly in Fig.~\ref{fig1}(c).
 
 \begin{figure*}
 \includegraphics[width=\textwidth]{fig2.pdf}
-\caption{Two-dimensional simulation of a gold strip (7.3~nm wide, period 14.6~nm) on a 5-nm ZnO
+\caption{Two-dimensional simulation of a gold strip (7.5~nm wide, period 14.6~nm) on a 5-nm ZnO
 slab in a uniform in-plane field of amplitude $\Fm=0.75$~V/nm. (a) Induced electron density
 at $t=3T$ for a strip whose right half is in contact with the crystal, in excess of the insulated
 strip; the black line marks the insulated part of the interface. (b) Field normal to the
 surface below the contacted edge. (c) Electrons transferred to the crystal per unit length of
 the strip (thin line) and their running average over one cycle (thick line). (d) Harmonic
-yields of the in-plane current.}
+yields of the in-plane current for the insulated strip, for one and for both ends in contact,
+and for two independent, mirror-related contacted ends.}
 \label{fig2}
 \end{figure*}
 
@@ -149,25 +145,21 @@ reduced by 12\%--20\%, and $F_{\rm dc}$ amounts to 13\%--21\% of $\Fz$.
 
 \textit{Harmonics and energy deposition.}---A waveform without half-wave symmetry drives even
 harmonics in a centrosymmetric medium, and a quasistatic field does so already through the
-bulk response~\cite{vampa2018}. In the insulated junction the weak even orders stem from the crystal surface and the field
-gradient~\cite{ciappina2012,vampa2017}.
+bulk response~\cite{vampa2018}. 
 The contact raises the second harmonic by a factor of 30 at $\Fz=1.2$~V/nm and by up to 800
 at lower fields, and the fourth and sixth by factors of 2 to 90 between 1.0 and
 1.75~V/nm~\cite{SM}. The ratio of even (fourth plus sixth) to odd (third plus fifth) yield
 is 0.9 to 1.3 for $\Fz$ between 1.0 and 1.4~V/nm, against 0.2 without the contact. The rectified injection current is itself a source of low-order radiation, like Brunel and
-injection-current harmonics~\cite{brunel1990,jurgens2020,babushkin2025}. The
-third and fifth harmonics change by less than a factor of four, whereas the seventh and ninth,
-which lie above the gap, are reduced by factors of 2 to 11 at $\Fz=1.0$ and 1.2~V/nm. We attribute the reduction to the bias, which makes successive half-cycles inequivalent, and
-to the loss of recolliding carriers into the metal~\cite{husakou2011}.
+injection-current harmonics~\cite{brunel1990,jurgens2020,babushkin2025}. Odd harmonics below the gap change by less than a factor of four; the seventh and ninth are
+reduced by factors of 2 to 11 near 1~V/nm~\cite{SM}.
 
 Figure~\ref{fig3}(a) shows the energy absorbed per unit contact area. In the insulated
 junction absorption is governed by interband excitation and rises steeply with field. The
 contact opens a channel with a much weaker field dependence: the absorbed energy is larger by
 a factor of 27 at $\Fz=1.2$~V/nm, by 60 at 1.0~V/nm, and by 100 to 900 below 0.7~V/nm; the
-two curves merge near 2.5~V/nm. Space charge is decisive for these numbers. Without $U^{\rm H}$ the energy absorbed at the same field inside the crystal is larger by another
-order of magnitude [triangles in Fig.~\ref{fig3}(a)] and the field is, by construction, not
-rectified: independent-electron descriptions overestimate the injection and miss its main
-consequence.
+two curves merge near 2.5~V/nm. Without $U^{\rm H}$ the energy absorbed at the same field is larger by another
+order of magnitude [triangles in Fig.~\ref{fig3}(a)]: independent-electron descriptions
+overestimate the injection and miss the rectification.
 
 \begin{figure*}
 \includegraphics[width=\textwidth]{fig3.pdf}
@@ -189,67 +181,78 @@ and hole injection balance; beyond midgap it changes sign because holes are inje
 preferentially. The second harmonic follows: at midgap it drops by two orders of magnitude,
 to the level of the insulated junction. The second parameter is the coupling across the
 contact [Fig.~\ref{fig3}(d)]. Reducing $t_c$ by a factor of 15 removes the quasistatic field
-and three quarters of the absorbed energy, and at $t_c=0.05$~eV the even harmonics are within
-a factor of two of the insulated level. For a tunnel barrier of 3~eV such a reduction
-corresponds to an insulating layer of about 0.4~nm; a continuum model with an explicit oxide
-layer confirms that 0.5~nm suffices~\cite{SM}. Such a layer leaves the near-field enhancement
-unaffected.
+and three quarters of the absorbed energy; at $t_c=0.05$~eV, which corresponds to an
+insulating layer of about 0.4~nm, the even harmonics are within a factor of two of the
+insulated level. A continuum model with an explicit oxide layer confirms that 0.5~nm
+suffices~\cite{SM}.
 
-\textit{Antenna edge in two dimensions.}---Figure~\ref{fig2} shows that the conclusions hold when the near field is computed rather than
-prescribed, and that the rectified current radiates.
+\textit{Antenna edge in two dimensions.}---Figure~\ref{fig2} shows that the conclusions hold
+when the near field is computed rather than prescribed, and that the rectified current radiates.
 For the insulated strip at $\Fm=0.75$~V/nm, the Hartree field alone produces hot spots at the
 two edges, with an in-plane field of 1.2~V/nm just outside the metal and a normal field of
-0.87~V/nm below its edge. We then put the right half of the strip in contact with the crystal,
+0.90~V/nm below its edge. We then put the right half of the strip in contact with the crystal,
 which represents a single antenna end. Electrons enter below the contacted edge and spread
-along the surface [Fig.~\ref{fig2}(a)]. The normal field below the edge rises to 1.12~V/nm in
-one half-cycle, 29\% more than for the insulated strip, and stays unchanged in the other
-[Fig.~\ref{fig2}(b)]; its quasistatic part reaches 0.09~V/nm, and the in-plane field outside
-the edge acquires one of 0.06~V/nm. After the pulse 0.14 electrons per nanometer of edge
-length remain in the crystal [Fig.~\ref{fig2}(c)], and the absorbed energy is 39 times that of
-the insulated strip. In the emission polarized along the driver the second harmonic is 90
-times stronger than for the insulated strip (800 times at $\Fm=0.5$~V/nm) and the fourth is
-four times stronger, while the odd orders change by less than a factor of two
-[Fig.~\ref{fig2}(d)].  A slab thicker by half gives the same fields, energy, and charge within 2\% and a
-second-harmonic enhancement of 60~\cite{SM}. With both halves in contact the absorbed energy doubles
-again and the third harmonic grows 13-fold, which we attribute to charge exchanged between
-the two edges of this short strip.
+along the surface [Fig.~\ref{fig2}(a)]. The normal field below the edge rises to 1.17~V/nm in
+one half-cycle, 30\% more than for the insulated strip, and stays unchanged in the other
+[Fig.~\ref{fig2}(b)]; its quasistatic part reaches 0.12~V/nm. After the pulse 0.18 electrons
+per nanometer of edge length remain in the crystal [Fig.~\ref{fig2}(c)], and the absorbed
+energy is 41 times that of the insulated strip. In the emission polarized along the driver the
+second harmonic is 130 times stronger than for the insulated strip, whereas the fifth and
+higher orders change by less than a factor of two [Fig.~\ref{fig2}(d)]. Other strip widths and
+slab thicknesses give second-harmonic enhancements of 60 to 130~\cite{SM}.
 
-\textit{Implications for experiments.}---The rectified current flows along the surface and
-therefore radiates into the surface normal, where harmonics are usually collected. For an antenna with mirror symmetry and a multicycle driver, the two ends are driven half a
-cycle apart with opposite outward normals, so their contributions to the $n$th harmonic carry
-the relative sign $(-1)^{n+1}$~\cite{SM}: odd orders add, whereas even orders cancel on axis
-and appear only off axis, for asymmetric antennas, or for few-cycle pulses. This is the same
-far-field rule as for the field-gradient mechanism~\cite{vampa2017}, and it is
-consistent with the absence of structure-induced even harmonics for rod
-antennas~\cite{vampa2017,imasaka2018} and with their observation for triangular
-ones~\cite{jalil2023}, which was attributed to the gradient. In our few-cycle simulations of
-the symmetric strip, whose two ends exchange charge, the cancellation is only partial: the
-second harmonic is 1.3 to 3 times weaker than with one end in contact~\cite{SM}. Our results show that a contact
-generates the second harmonic far more efficiently than surface and gradient together, and
-they provide a test: a sub-nanometer oxide, or a metal whose Fermi level is pinned near midgap,
-suppresses the contact contribution but not the gradient one. Native oxides and adhesion
-layers decide whether a given sample is in the contact regime at all. Rectification also offers an explanation for the band-gap
-fluorescence with a low-order intensity dependence seen only under antennas on
-ZnO~\cite{imasaka2018}: the absorbed energy in Fig.~\ref{fig3}(a) rises far more slowly with
-field than interband excitation does. Finally, since the contact multiplies the deposited energy, a
-spacer should raise the damage threshold of plasmonic HHG
-sources~\cite{sivis2013,vampa2017}.
+\textit{Symmetry.}---The rectified current flows along the surface and radiates into the
+surface normal, where harmonics are usually collected. For an antenna with mirror symmetry the
+two ends are driven half a cycle apart with opposite outward normals, so their contributions
+to the $n$th harmonic carry the relative sign $(-1)^{n+1}$~\cite{SM}: odd orders add and even
+orders cancel on axis, as for the field-gradient mechanism~\cite{vampa2017}.
+Figure~\ref{fig2}(d) confirms this. The response of two independent, mirror-related ends
+follows exactly from simulations of one end with both signs of the field; its second harmonic
+is 33 times weaker than that of the single end, and the odd orders are unchanged. A strip that
+is mirror symmetric down to the lattice, with both ends in contact, emits a second harmonic 12
+times weaker. EIGHTTXT WEDGETXT The contact thus produces even harmonics on axis for asymmetric
+antennas only, in agreement with their absence for bars~\cite{vampa2017,imasaka2018} and their
+observation for triangles~\cite{jalil2023}, where they were attributed to the gradient. In
+Ref.~\cite{jalil2023} the even-to-odd ratio falls with intensity, which was taken to exclude a
+polarity induced by the metal. For a space-charge-limited contact this is the expected
+behavior: in the chain model the ratio of second to third harmonic falls by three orders of
+magnitude between $\Fz=0.3$ and 1.9~V/nm~\cite{SM}. A sub-nanometer oxide, or a metal whose
+Fermi level is pinned near midgap, suppresses the contact contribution but not the gradient
+one.
 
-Our models are minimal. The crystal has the gap, masses, density, and permittivity of ZnO but
-a simplified lattice, the interaction is treated at the mean-field level, and there is no
-scattering, so that the results apply to few-cycle pulses; for longer pulses the quasistatic
+\textit{Comparison with experiment.}---Gold bars on ZnO driven at
+2~$\mu$m~\cite{imasaka2018} allow a quantitative test. We computed the quasi-static near field
+of the 570~nm~$\times$~100~nm bars, used its depth profile in the chain model, where it
+strengthens the rectification ($F_{\rm dc}$ up to $0.28\Fz$), and averaged the response over
+the hot spot, with the contacted junction under the metal and the insulated one
+elsewhere~\cite{SM}. The measured yields of the fifth, seventh, and ninth harmonics and of the
+band-gap fluorescence grow with intensity with exponents of about 3.4, 3.2, 3.0, and
+2.7~\cite{imasaka2018,ashihara2020}, far below the multiphoton values. With the peak field
+enhancement as the only adjusted parameter, the model gives 3.0--3.3, 2.5--3.1, 3.0--4.1, and
+2.7--2.9 for an enhancement of 3 to 4, taking the density of holes as a proxy for the
+fluorescence. The harmonics do not distinguish contacted from insulated bars, but the
+fluorescence does: without the contact its exponent would be 3.3--4.0. The enhancement of 9
+simulated for the peak~\cite{imasaka2019} gives exponents near 2 throughout. For an enhancement
+of 4 the contact raises the absorbed energy 27-fold at the lowest measured intensity,
+0.012~TW/cm$^2$, and by less than a factor of two at the highest, 0.1~TW/cm$^2$: the contact
+dominates at the onset of antenna-enhanced HHG and is masked by interband excitation near the
+damage threshold.
+
+Our models are minimal: a simplified lattice with the gap, masses, density, and permittivity
+of ZnO, a mean-field interaction, and no scattering, so that the results apply to few-cycle
+pulses; for longer pulses the quasistatic
 field grows from cycle to cycle~\cite{SM} until back-flow and relaxation balance the
-injection. Interface states and band bending are subsumed in $\PhiB$ and $t_c$. The strip in Fig.~\ref{fig2} is far smaller than a real antenna and not
-resonant; it reproduces the edge, not the resonance. The results are converged, depend only weakly on near-field decay length and wavelength,
-and are reproduced, with a stronger reduction of the forward half-cycle, by an independent
-continuum model~\cite{SM}. The mechanism rests on the asymmetry between the barriers for
-electrons and holes and on Gauss's law.
+injection. The strip in Fig.~\ref{fig2} reproduces the edge of an antenna, not its size or
+resonance. The results are converged, depend only weakly on wavelength, and are reproduced by
+an independent continuum model~\cite{SM}.
 
 In summary, a metal antenna in contact with a semiconductor is not a passive field
 concentrator. It injects a space-charge-limited sheet of carriers in every cycle, and the
-field of that sheet rectifies the near field that drives the crystal. A sub-nanometer spacer switches the effect off, which gives experiments a simple control
-and antenna design a new degree of freedom: the contact can be removed where clean spectra
-and high damage thresholds are wanted, or engineered through the barrier height where a sub-cycle bias is useful, as for
+field of that sheet rectifies the near field that drives the crystal. The effect dominates
+energy deposition and even harmonics at the onset of antenna-enhanced HHG, cancels in the far
+field of symmetric antennas, and is switched off by a sub-nanometer spacer or a midgap
+barrier. This gives experiments clear tests and antenna design a new degree of freedom: a
+built-in sub-cycle bias, of interest for even harmonics from centrosymmetric crystals and for
 lightwave-driven currents~\cite{schiffrin2013}.
 
 % TODO(authors): add funding acknowledgments and the statement on the use of AI tools required by APS.

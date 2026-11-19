@@ -84,7 +84,7 @@ def schematic(ax):
     ax.text(0.2, 9.5, "(a)", fontsize=8)
 
 def fig1():
-    fig = plt.figure(figsize=(7.0, 1.95))
+    fig = plt.figure(figsize=(7.0, 1.85))
     gs = fig.add_gridspec(2, 3, width_ratios=[1.05, 1.25, 1.1], wspace=0.36, hspace=0.12, left=0.01, right=0.99, top=0.97, bottom=0.185)
     schematic(fig.add_subplot(gs[:, 0]))
     c, i = L("1d_G_c_D5.5"), L("1d_G_i_D5.5")
@@ -116,11 +116,9 @@ def nl2(hi, lo, key):
     h, l = L(hi), L(lo)
     return h["t"], h[key] - float(h["F0"]) / float(l["F0"]) * l[key], float(h["w"])
 
-def fig2(F0="0.75", tsnap=3.0):
-    if not have(f"G1_F{F0}_right"):
-        F0 = "0.5"
-    fig = plt.figure(figsize=(7.0, 2.0))
-    c, i, r = L(f"G1_F{F0}_both"), L(f"G1_F{F0}_none"), L(f"G1_F{F0}_right")
+def fig2(F0="0.75", tsnap=3.0, pre="G4"):
+    fig = plt.figure(figsize=(7.0, 1.9))
+    c, i, r = L(f"{pre}_F{F0}_both"), L(f"{pre}_F{F0}_none"), L(f"{pre}_F{F0}_right")
     T = 2 * np.pi / float(c["w"]); b = float(c["b"]); Nx, Nz, Wm, Hm = int(c["Nx"]), int(c["Nz"]), int(c["Wm"]), int(c["Hm"])
     Ly = float(c["Ly"]); i0 = (Nx - Wm) // 2
     # (a) induced electron density of the one-sided contact minus insulated
@@ -137,7 +135,7 @@ def fig2(F0="0.75", tsnap=3.0):
     vmax = 0.06
     im = ax.imshow(Gs * 1e3, cmap="RdBu_r", vmin=-vmax * 1e3, vmax=vmax * 1e3, extent=ext, aspect="equal", interpolation="nearest")
     ax.add_patch(Rectangle(((i0 - 0.5) * b / NM, -(Hm + 0.5) * b / NM), Wm * b / NM, Hm * b / NM, fc="#f1c40f", ec="k", lw=0.6))
-    xm = (i0 + Wm / 2 - 0.5) * b / NM
+    xm = (i0 + (Wm + 1) // 2 - 0.5) * b / NM
     ax.plot([(i0 - 0.5) * b / NM, xm], [-0.5 * b / NM] * 2, color="k", lw=2.0, solid_capstyle="butt")
     ax.set_ylim((Nz - 0.5) * b / NM, -(Hm + 2.5) * b / NM); ax.set_xlabel(r"$x$ (nm)"); ax.set_ylabel(r"$z$ (nm)")
     cb = fig.colorbar(im, ax=ax, orientation="horizontal", fraction=0.06, pad=0.03, location="top", aspect=40, extend="both")
@@ -159,15 +157,20 @@ def fig2(F0="0.75", tsnap=3.0):
     axb.text(0.97, 0.08, "(b)", transform=axb.transAxes, ha="right"); axc.text(0.97, 0.08, "(c)", transform=axc.transAxes, ha="right")
     # (d) nonlinear in-plane emission
     axd = fig.add_axes([0.775, 0.2, 0.215, 0.745])
-    lo = "G1_F0.025_"
+    lo = f"{pre}_F0.025_"
     l0 = L(lo + "none"); y1 = yields(l0["t"], l0["Jx"], float(l0["w"]), [1])[0] * (float(F0) / 0.025) ** 2
     orders = np.arange(2, 10)
-    for tag, col, mk, ls, lab, kw in (("none", CS, "s", "--", "insulated", dict(mfc="w")), ("right", CJ, "o", "-", "one end in contact", {}), ("both", CI, "^", ":", "both ends", {})):
-        t, J, w = nl2(f"G1_F{F0}_{tag}", lo + tag, "Jx")
+    for tag, col, mk, ls, lab, kw in (("none", CS, "s", "--", "insulated", dict(mfc="w")), ("right", CJ, "o", "-", "one end in contact", {}), ("both", CI, "^", ":", "both ends in contact", {})):
+        t, J, w = nl2(f"{pre}_F{F0}_{tag}", lo + tag, "Jx")
         Y = yields(t, J, w, range(1, 10))
         axd.semilogy(orders, Y[1:] / y1, mk + ls, color=col, ms=3.5, label=lab, **kw)
+    if have(f"{pre}_F-{F0}_right"):                      # two independent mirror-related ends: J[F] - J[-F]
+        t, Jp, w = nl2(f"{pre}_F{F0}_right", lo + "right", "Jx"); _, Jm, _ = nl2(f"{pre}_F-{F0}_right", lo + "right", "Jx")
+        Y = yields(t, Jp - Jm, w, range(1, 10)) / 4
+        axd.semilogy(orders, Y[1:] / y1, "D-.", color=CG, ms=3, mfc="w", label="two independent ends")
     axd.set_xlabel("harmonic order $n$"); axd.set_ylabel(r"in-plane yield $S_n/S_1$"); axd.set_xticks(orders)
-    axd.legend(frameon=False, fontsize=6.5, loc="upper right", labelspacing=0.2, handlelength=1.8, borderaxespad=0.2)
+    axd.set_ylim(1.5e-6, 0.6)
+    axd.legend(frameon=False, fontsize=6, loc="upper right", labelspacing=0.15, handlelength=2.0, borderaxespad=0.15)
     axd.text(0.05, 0.06, "(d)", transform=axd.transAxes)
     fig.savefig(os.path.join(FIG, "fig2.pdf")); plt.close(fig)
 

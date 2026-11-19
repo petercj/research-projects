@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{3}%
+\begin{thebibliography}{6}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -78,6 +78,42 @@
   contacts},\ }\href {https://doi.org/10.1063/1.3581173} {\bibfield  {journal}
   {\bibinfo  {journal} {J. Appl. Phys.}\ }\textbf {\bibinfo {volume} {109}},\
   \bibinfo {pages} {121301} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Imasaka}\ \emph {et~al.}(2018)\citenamefont
+  {Imasaka}, \citenamefont {Kaji}, \citenamefont {Shimura},\ and\ \citenamefont
+  {Ashihara}}]{imasaka2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Imasaka}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Kaji}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Shimura}},\ and\ \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Ashihara}},\ }\bibfield  {title}
+  {\bibinfo {title} {Antenna-enhanced high harmonic generation in a
+  wide-bandgap semiconductor {ZnO}},\ }\href
+  {https://doi.org/10.1364/OE.26.021364} {\bibfield  {journal} {\bibinfo
+  {journal} {Opt. Express}\ }\textbf {\bibinfo {volume} {26}},\ \bibinfo
+  {pages} {21364} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Imasaka}\ \emph {et~al.}(2019)\citenamefont
+  {Imasaka}, \citenamefont {Kaji}, \citenamefont {Shimura},\ and\ \citenamefont
+  {Ashihara}}]{imasaka2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Imasaka}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Kaji}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Shimura}},\ and\ \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Ashihara}},\ }\bibfield  {title}
+  {\bibinfo {title} {Antenna-enhanced high harmonic generation in a
+  wide-bandgap semiconductor {ZnO}},\ }\href
+  {https://doi.org/10.1051/epjconf/201920502024} {\bibfield  {journal}
+  {\bibinfo  {journal} {EPJ Web Conf.}\ }\textbf {\bibinfo {volume} {205}},\
+  \bibinfo {pages} {02024} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ashihara}\ and\ \citenamefont
+  {Imasaka}(2020)}]{ashihara2020}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Ashihara}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Imasaka}},\ }\bibfield  {title} {\bibinfo {title} {High harmonic generation
+  from solids using plasmonic antennas},\ }\href
+  {https://doi.org/10.2184/lsj.48.4_174} {\bibfield  {journal} {\bibinfo
+  {journal} {Rev. Laser Eng.}\ }\textbf {\bibinfo {volume} {48}},\ \bibinfo
+  {pages} {174} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Wu}\ \emph {et~al.}(2015)\citenamefont {Wu},
   \citenamefont {Ghimire}, \citenamefont {Reis}, \citenamefont {Schafer},\ and\
   \citenamefont {Gaarde}}]{wu2015}%
