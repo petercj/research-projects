@@ -66,7 +66,7 @@ def rows2d(pre, F0, confs, label):
 
 C3 = (("none", "insulated"), ("right", "one end"), ("both", "both ends"))
 rows = []
-for pre, F0, confs, label in (("G4", "0.75", C3, "33 columns"), ("G4b", "0.75", (("both", "both ends"),), "33 columns, wedge"), ("G4c8", "0.75", C3[1:], "33 columns, 8 cycles"),
+for pre, F0, confs, label in (("G4", "0.75", C3, "33 columns"), ("G4b", "0.75", (("none", "insulated"), ("both", "both ends")), "33 columns, wedge"), ("G4c8", "0.75", C3[1:], "33 columns, 8 cycles"),
                               ("G1", "0.5", C3, "32 columns"), ("G1", "0.75", C3, "32 columns"), ("G2", "0.75", C3[:2], "32 columns, 32 layers"), ("G1c8", "0.75", C3[1:], "32 columns, 8 cycles")):
     r = rows2d(pre, F0, confs, label)
     if r: rows += r + [r"\hline"]

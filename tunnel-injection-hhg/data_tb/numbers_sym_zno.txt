@@ -1,0 +1,32 @@
+G4
+  one end, +F                                S2=3.9e-04 S3=1.9e-04 S4=4.2e-05 S5=3.1e-04 S6=7.9e-05 S7=5.5e-04
+  one end, -F                                S2=5.4e-04 S3=1.9e-04 S4=2.7e-05 S5=1.7e-04 S6=1.6e-04 S7=4.7e-04
+  two independent ends (mirror pair)         S2=1.2e-05 S3=1.8e-04 S4=7.4e-06 S5=2.2e-04 S6=5.4e-05 S7=5.1e-04
+    even part of one end                     S2=4.5e-04 S3=1.2e-05 S4=2.7e-05 S5=2.3e-05 S6=6.4e-05 S7=2.4e-06
+  both ends in contact (symmetric strip)     S2=3.0e-05 S3=4.8e-03 S4=6.0e-05 S5=1.9e-04 S6=3.8e-05 S7=3.7e-04
+  insulated                                  S2=3.4e-06 S3=1.6e-03 S4=5.4e-05 S5=2.7e-04 S6=5.7e-05 S7=6.8e-04
+    G4_F0.75_none          W=0.015 eV/nm  Fz(R) +0.90/-0.82  Fz(L) +0.82/-0.91  q_end=0.000 e/nm (R 0.000, L -0.000)
+    G4_F0.75_right         W=0.610 eV/nm  Fz(R) +1.17/-0.83  Fz(L) +0.95/-0.92  q_end=0.180 e/nm (R 0.021, L 0.159)
+    G4_F-0.75_right        W=0.610 eV/nm  Fz(R) +1.14/-0.85  Fz(L) +1.01/-0.86  q_end=0.192 e/nm (R 0.023, L 0.169)
+    G4_F0.75_both          W=1.217 eV/nm  Fz(R) +1.32/-0.86  Fz(L) +1.29/-0.88  q_end=0.150 e/nm (R 0.060, L 0.090)
+G4c8
+  one end, +F                                S2=3.5e-04 S3=5.8e-04 S4=4.6e-05 S5=2.6e-04 S6=1.3e-04 S7=6.0e-04
+  one end, -F                                S2=4.5e-04 S3=5.1e-04 S4=3.2e-05 S5=2.6e-04 S6=1.3e-04 S7=6.1e-04
+  two independent ends (mirror pair)         S2=2.9e-06 S3=5.3e-04 S4=9.0e-06 S5=2.5e-04 S6=3.3e-06 S7=6.1e-04
+    even part of one end                     S2=4.0e-04 S3=7.3e-06 S4=3.0e-05 S5=8.7e-06 S6=1.3e-04 S7=3.8e-07
+  both ends in contact (symmetric strip)     S2=2.5e-06 S3=1.3e-02 S4=4.4e-05 S5=1.5e-04 S6=4.5e-06 S7=3.3e-04
+    G4c8_F0.75_right       W=0.896 eV/nm  Fz(R) +1.22/-0.81  Fz(L) +1.03/-0.88  q_end=0.265 e/nm (R 0.050, L 0.215)
+    G4c8_F-0.75_right      W=0.893 eV/nm  Fz(R) +1.22/-0.81  Fz(L) +1.04/-0.88  q_end=0.245 e/nm (R 0.041, L 0.204)
+    G4c8_F0.75_both        W=1.784 eV/nm  Fz(R) +1.38/-0.83  Fz(L) +1.37/-0.80  q_end=0.200 e/nm (R 0.094, L 0.105)
+quasi-static: max |Ex|/E0 at 2 nm depth = 4.83
+   depth profile 1 nm inside the edge (z nm, e): [(0.5, 1.16), (0.8, 1.05), (2.0, 0.76), (3.7, 0.58), (7.9, 0.4), (15.9, 0.29), (33.3, 0.19), (60.3, 0.14)]
+enhancement 4.0: peak local field 0.82-2.38 V/nm over 0.012-0.1 TW/cm2; exponents {'S5': (np.float64(2.966001376791894), np.float64(3.0218366293059358)), 'S7': (np.float64(2.492921607658921), np.float64(2.5874460433179545)), 'S9': (np.float64(2.9745400474088366), np.float64(3.0054426572759056)), 'holes': (np.float64(2.6524907018547905), np.float64(3.3139827200936836)), 'W': (np.float64(2.1874430099036584), np.float64(3.3966414918794374))}
+   W     contact/insulated: 1.7-22.7 in the measured range; > 10 below 0.0169 TW/cm2; at 0.012: 27.3, at 0.03: 3.9
+   holes contact/insulated: 1.4-5.7 in the measured range; > 10 below 0.0088 TW/cm2; at 0.012: 6.3, at 0.03: 2.3
+   S2    contact/insulated: 4.1-33.0 in the measured range; > 10 below 0.0296 TW/cm2; at 0.012: 35.5, at 0.03: 10.7
+   S4    contact/insulated: 1.5-20.0 in the measured range; > 10 below 0.0169 TW/cm2; at 0.012: 20.8, at 0.03: 4.0
+enhancement 9.0: peak local field 1.85-5.34 V/nm over 0.012-0.1 TW/cm2; exponents {'S5': (np.float64(2.3774088405363614), np.float64(2.5298367084746896)), 'S7': (np.float64(2.339235887295631), np.float64(2.050041293657686)), 'S9': (np.float64(2.2751770343375677), np.float64(2.18692137573145)), 'holes': (np.float64(1.7754530031935096), np.float64(2.016669999866576)), 'W': (np.float64(1.696738485608761), np.float64(2.0314546391357196))}
+   W     contact/insulated: 1.1-2.3 in the measured range; > 10 below 0.0034 TW/cm2; at 0.012: 2.4, at 0.03: 1.4
+   holes contact/insulated: 1.0-1.7 in the measured range; > 10 below 0.0016 TW/cm2; at 0.012: 1.7, at 0.03: 1.2
+   S2    contact/insulated: 1.3-6.4 in the measured range; > 10 below 0.0060 TW/cm2; at 0.012: 6.7, at 0.03: 3.4
+   S4    contact/insulated: 1.0-2.7 in the measured range; > 10 below 0.0034 TW/cm2; at 0.012: 2.8, at 0.03: 1.0

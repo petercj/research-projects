@@ -12,3 +12,5 @@ G4c8_F0.025_both F0=0.025 contact=both Nx=64 Nz=22 Wm=33 Hm=4 ncyc=8
 G4c8_F0.75_right F0=0.75 contact=right Nx=64 Nz=22 Wm=33 Hm=4 ncyc=8
 G4c8_F-0.75_right F0=-0.75 contact=right Nx=64 Nz=22 Wm=33 Hm=4 ncyc=8
 G4c8_F0.025_right F0=0.025 contact=right Nx=64 Nz=22 Wm=33 Hm=4 ncyc=8
+G4b_F0.75_none F0=0.75 contact=none Nx=64 Nz=22 Wm=33 Hm=4 bevel=1
+G4b_F0.025_none F0=0.025 contact=none Nx=64 Nz=22 Wm=33 Hm=4 bevel=1
